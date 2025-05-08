@@ -1,0 +1,18 @@
+# OpenapiClient::SecureTokenLinkByIdResponseIntent
+
+## Properties
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **payment_types** | **Array&lt;String&gt;** |  | [optional] |
+
+## Example
+
+```ruby
+require 'openapi_client'
+
+instance = OpenapiClient::SecureTokenLinkByIdResponseIntent.new(
+  payment_types: null
+)
+```
+
