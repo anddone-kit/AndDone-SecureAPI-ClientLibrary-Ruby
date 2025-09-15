@@ -44,7 +44,7 @@ module OpenapiClient
         :'is_success_status_code' => :'Boolean',
         :'message' => :'String',
         :'error_code' => :'String',
-        :'status_code' => :'String'
+        :'status_code' => :'Float'
       }
     end
 

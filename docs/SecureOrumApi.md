@@ -10,7 +10,7 @@ All URIs are relative to *https://api.uat.anddone.com*
 
 ## secure_bankaccounts_details_post
 
-> <Array<VerifyBankAccountResponse>> secure_bankaccounts_details_post(x_api_key, x_app_key, x_version, origin, opts)
+> <VerifyBankAccountResponse> secure_bankaccounts_details_post(x_api_key, x_app_key, x_version, origin, opts)
 
 This API will request for verified bank account.
 
@@ -56,7 +56,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<VerifyBankAccountResponse>>, Integer, Hash)> secure_bankaccounts_details_post_with_http_info(x_api_key, x_app_key, x_version, origin, opts)
+> <Array(<VerifyBankAccountResponse>, Integer, Hash)> secure_bankaccounts_details_post_with_http_info(x_api_key, x_app_key, x_version, origin, opts)
 
 ```ruby
 begin
@@ -64,7 +64,7 @@ begin
   data, status_code, headers = api_instance.secure_bankaccounts_details_post_with_http_info(x_api_key, x_app_key, x_version, origin, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<VerifyBankAccountResponse>>
+  p data # => <VerifyBankAccountResponse>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling SecureOrumApi->secure_bankaccounts_details_post_with_http_info: #{e}"
 end
@@ -84,7 +84,7 @@ end
 
 ### Return type
 
-[**Array&lt;VerifyBankAccountResponse&gt;**](VerifyBankAccountResponse.md)
+[**VerifyBankAccountResponse**](VerifyBankAccountResponse.md)
 
 ### Authorization
 
@@ -98,7 +98,7 @@ end
 
 ## secure_bankaccounts_verify_post
 
-> <Array<VerifyBankAccountResponse>> secure_bankaccounts_verify_post(x_api_key, x_app_key, x_version, origin, opts)
+> <VerifyBankAccountResponse> secure_bankaccounts_verify_post(x_api_key, x_app_key, x_version, origin, opts)
 
 This API will request for account verification.
 
@@ -142,7 +142,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<VerifyBankAccountResponse>>, Integer, Hash)> secure_bankaccounts_verify_post_with_http_info(x_api_key, x_app_key, x_version, origin, opts)
+> <Array(<VerifyBankAccountResponse>, Integer, Hash)> secure_bankaccounts_verify_post_with_http_info(x_api_key, x_app_key, x_version, origin, opts)
 
 ```ruby
 begin
@@ -150,7 +150,7 @@ begin
   data, status_code, headers = api_instance.secure_bankaccounts_verify_post_with_http_info(x_api_key, x_app_key, x_version, origin, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<VerifyBankAccountResponse>>
+  p data # => <VerifyBankAccountResponse>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling SecureOrumApi->secure_bankaccounts_verify_post_with_http_info: #{e}"
 end
@@ -168,7 +168,7 @@ end
 
 ### Return type
 
-[**Array&lt;VerifyBankAccountResponse&gt;**](VerifyBankAccountResponse.md)
+[**VerifyBankAccountResponse**](VerifyBankAccountResponse.md)
 
 ### Authorization
 

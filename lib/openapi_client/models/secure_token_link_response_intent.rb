@@ -54,7 +54,7 @@ module OpenapiClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'payment_types' => :'String'
+        :'payment_types' => :'Array<String>'
       }
     end
 
@@ -80,7 +80,9 @@ module OpenapiClient
       }
 
       if attributes.key?(:'payment_types')
-        self.payment_types = attributes[:'payment_types']
+        if (value = attributes[:'payment_types']).is_a?(Array)
+          self.payment_types = value
+        end
       end
     end
 
@@ -96,19 +98,7 @@ module OpenapiClient
     # @return true if the model is valid
     def valid?
       warn '[DEPRECATED] the `valid?` method is obsolete'
-      payment_types_validator = EnumAttributeValidator.new('String', ["NotDefined", "ACH", "CreditCard", "DebitCard", "RTP"])
-      return false unless payment_types_validator.valid?(@payment_types)
       true
-    end
-
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] payment_types Object to be assigned
-    def payment_types=(payment_types)
-      validator = EnumAttributeValidator.new('String', ["NotDefined", "ACH", "CreditCard", "DebitCard", "RTP"])
-      unless validator.valid?(payment_types)
-        fail ArgumentError, "invalid value for \"payment_types\", must be one of #{validator.allowable_values}."
-      end
-      @payment_types = payment_types
     end
 
     # Checks equality by comparing each attribute.

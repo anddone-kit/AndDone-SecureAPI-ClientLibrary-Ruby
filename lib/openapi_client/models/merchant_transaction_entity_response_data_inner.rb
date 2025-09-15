@@ -296,7 +296,7 @@ module OpenapiClient
         :'adjustment_display_name' => :'String',
         :'adjustment_descriptor_message' => :'String',
         :'payment_adjustment_type' => :'String',
-        :'commission_type' => :'String',
+        :'commission_type' => :'TransactionPaymentResponseAchTenderInfoCommissionType',
         :'commission_value' => :'Float',
         :'commission_fixed_value' => :'Float',
         :'account_token' => :'String',
@@ -616,8 +616,6 @@ module OpenapiClient
       return false unless previous_transaction_status_validator.valid?(@previous_transaction_status)
       payment_adjustment_type_validator = EnumAttributeValidator.new('String', ["None", "CashIncentive", "Surcharge", "ConvenienceFee", "CashDiscount"])
       return false unless payment_adjustment_type_validator.valid?(@payment_adjustment_type)
-      commission_type_validator = EnumAttributeValidator.new('String', ["Fixed", "Percentage"])
-      return false unless commission_type_validator.valid?(@commission_type)
       payment_type_validator = EnumAttributeValidator.new('String', ["None", "AnytimePayment", "SubDomain", "PaymentIntent", "PaymentLink", "OpenPayment", "TokenLink"])
       return false unless payment_type_validator.valid?(@payment_type)
       payment_category_validator = EnumAttributeValidator.new('String', ["None", "MerchantPayment", "MPIPD", "MPIPI", "PFD", "PFI"])
@@ -705,16 +703,6 @@ module OpenapiClient
         fail ArgumentError, "invalid value for \"payment_adjustment_type\", must be one of #{validator.allowable_values}."
       end
       @payment_adjustment_type = payment_adjustment_type
-    end
-
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] commission_type Object to be assigned
-    def commission_type=(commission_type)
-      validator = EnumAttributeValidator.new('String', ["Fixed", "Percentage"])
-      unless validator.valid?(commission_type)
-        fail ArgumentError, "invalid value for \"commission_type\", must be one of #{validator.allowable_values}."
-      end
-      @commission_type = commission_type
     end
 
     # Custom attribute writer method checking allowed values (enum).

@@ -23,7 +23,7 @@
 | **account_token** | **String** |  | [optional] |
 | **account_token_message** | **String** |  | [optional] |
 | **create_account_token** | **Boolean** |  | [optional] |
-| **commission_type** | **String** |  | [optional] |
+| **commission_type** | [**TransactionPaymentResponseAchTenderInfoCommissionType**](TransactionPaymentResponseAchTenderInfoCommissionType.md) |  | [optional] |
 | **commission_value** | **Float** |  | [optional] |
 | **commission_fixed_value** | **Float** |  | [optional] |
 

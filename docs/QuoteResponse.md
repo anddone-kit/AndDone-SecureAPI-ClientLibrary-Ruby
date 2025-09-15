@@ -9,7 +9,7 @@
 | **p_f_type** | **String** | The type of premium finance. | [optional] |
 | **is_endorsement** | **Boolean** | Indicates if the quote is an endorsement. | [optional] |
 | **merchant_id** | **String** | The ID of the merchant. | [optional] |
-| **program_id** | **Float** | The ID of the program. | [optional] |
+| **program_id** | **Integer** | The ID of the program. | [optional] |
 | **program_name** | **String** | The name of the program. | [optional] |
 | **payment_intent_id** | **String** | The ID of the payment intent. | [optional] |
 | **account_number** | **String** | The account number. | [optional] |
@@ -25,12 +25,12 @@
 | **total_payments** | **Float** | The total payments. | [optional] |
 | **payment_amount** | **Float** | The payment amount. | [optional] |
 | **total_amount** | **Float** | Total amount. | [optional] |
-| **doc_stamp** | **Float** | The document stamp. | [optional] |
+| **doc_stamp** | **Integer** | The document stamp. | [optional] |
 | **first_due_date** | **String** | The first due date. | [optional] |
 | **apr** | **Float** | The annual percentage rate (APR). | [optional] |
 | **installments** | **Integer** | The number of installments. | [optional] |
 | **batch_id** | **String** | The batch ID. | [optional] |
-| **payments_retained** | **Float** | The number of payments retained. | [optional] |
+| **payments_retained** | **Integer** | The number of payments retained. | [optional] |
 | **payment_retained_amount** | **Float** | The amount retained from the payment. | [optional] |
 | **retail_agent_register_login_url** | **String** | The URL for the retail agent register login. | [optional] |
 | **insured_name** | **String** | The name of the insured. | [optional] |

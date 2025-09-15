@@ -28,7 +28,7 @@ module OpenapiClient
     # @option opts [String] :id The Bank Account Entity Id
     # @option opts [String] :type Set Type
     # @option opts [VerificationEntityRequest] :verification_entity_request Verification Entity
-    # @return [Array<VerifyBankAccountResponse>]
+    # @return [VerifyBankAccountResponse]
     def secure_bankaccounts_details_post(x_api_key, x_app_key, x_version, origin, opts = {})
       data, _status_code, _headers = secure_bankaccounts_details_post_with_http_info(x_api_key, x_app_key, x_version, origin, opts)
       data
@@ -43,7 +43,7 @@ module OpenapiClient
     # @option opts [String] :id The Bank Account Entity Id
     # @option opts [String] :type Set Type
     # @option opts [VerificationEntityRequest] :verification_entity_request Verification Entity
-    # @return [Array<(Array<VerifyBankAccountResponse>, Integer, Hash)>] Array<VerifyBankAccountResponse> data, response status code and response headers
+    # @return [Array<(VerifyBankAccountResponse, Integer, Hash)>] VerifyBankAccountResponse data, response status code and response headers
     def secure_bankaccounts_details_post_with_http_info(x_api_key, x_app_key, x_version, origin, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: SecureOrumApi.secure_bankaccounts_details_post ...'
@@ -97,7 +97,7 @@ module OpenapiClient
       post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'verification_entity_request'])
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<VerifyBankAccountResponse>'
+      return_type = opts[:debug_return_type] || 'VerifyBankAccountResponse'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
@@ -126,7 +126,7 @@ module OpenapiClient
     # @param origin [String] origin
     # @param [Hash] opts the optional parameters
     # @option opts [VerifyBankAccountRequest] :verify_bank_account_request Bank Accout detals
-    # @return [Array<VerifyBankAccountResponse>]
+    # @return [VerifyBankAccountResponse]
     def secure_bankaccounts_verify_post(x_api_key, x_app_key, x_version, origin, opts = {})
       data, _status_code, _headers = secure_bankaccounts_verify_post_with_http_info(x_api_key, x_app_key, x_version, origin, opts)
       data
@@ -139,7 +139,7 @@ module OpenapiClient
     # @param origin [String] origin
     # @param [Hash] opts the optional parameters
     # @option opts [VerifyBankAccountRequest] :verify_bank_account_request Bank Accout detals
-    # @return [Array<(Array<VerifyBankAccountResponse>, Integer, Hash)>] Array<VerifyBankAccountResponse> data, response status code and response headers
+    # @return [Array<(VerifyBankAccountResponse, Integer, Hash)>] VerifyBankAccountResponse data, response status code and response headers
     def secure_bankaccounts_verify_post_with_http_info(x_api_key, x_app_key, x_version, origin, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: SecureOrumApi.secure_bankaccounts_verify_post ...'
@@ -187,7 +187,7 @@ module OpenapiClient
       post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'verify_bank_account_request'])
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<VerifyBankAccountResponse>'
+      return_type = opts[:debug_return_type] || 'VerifyBankAccountResponse'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']

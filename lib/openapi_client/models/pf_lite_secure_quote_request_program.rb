@@ -35,7 +35,7 @@ module OpenapiClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'program_id' => :'String',
+        :'program_id' => :'Integer',
         :'loan_type' => :'String'
       }
     end

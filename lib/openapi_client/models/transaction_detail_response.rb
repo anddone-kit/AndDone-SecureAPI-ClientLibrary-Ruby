@@ -199,7 +199,7 @@ module OpenapiClient
         :'batch_id' => :'String',
         :'transaction_code' => :'String',
         :'transaction_origin' => :'String',
-        :'refund_origin' => :'Integer',
+        :'refund_origin' => :'TransactionPaymentResponseRefundOrigin',
         :'billing_contact' => :'TransactionPaymentResponseBillingContact',
         :'reference_transaction_id' => :'String',
         :'transaction_date' => :'String',

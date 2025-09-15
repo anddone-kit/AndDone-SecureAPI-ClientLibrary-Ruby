@@ -17,7 +17,7 @@
 | **coverage** | **String** | This denotes the coverage and it is required if adding new policy. | [optional] |
 | **effective_date** | **String** | This denotes the effective date. |  |
 | **expiration_date** | **String** | This denotes the expiration date and it is required if adding new policy. |  |
-| **term** | **Float** | This denotes the number of terms. | [optional] |
+| **term** | **Integer** | This denotes the number of terms. | [optional] |
 | **minimum_earned** | **Float** | This denotes the minimum earned amount. | [optional] |
 | **minimum_earned_percent** | **Float** | This denotes the minimum earned percent. | [optional] |
 | **auditable** | **Boolean** | This denotes the flag if it is auditable or not. | [optional] |

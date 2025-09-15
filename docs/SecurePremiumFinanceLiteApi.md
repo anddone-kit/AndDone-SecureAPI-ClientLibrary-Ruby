@@ -206,7 +206,7 @@ x_api_key = 'x_api_key_example' # String | an authorization header
 x_app_key = 'x_app_key_example' # String | an authorization header
 x_version = 8.14 # Float | x-version
 origin = 'origin_example' # String | origin
-pf_lite_payment_link_request = OpenapiClient::PFLitePaymentLinkRequest.new({quote_key: 'quote_key_example', title: 'title_example', payment_description: 'payment_description_example', expire_in: 'expire_in_example', expire_in_unit: 'NA', reference_data_list: [OpenapiClient::PFLitePaymentLinkRequestReferenceDataListInner.new({reference_type: 'None', reference_key: 'reference_key_example'})], settings: OpenapiClient::PFLitePaymentLinkRequestSettings.new({selected_customer_fields: 'selected_customer_fields_example', additional_details_preference: 'None', intent: OpenapiClient::PaymentLinkRequestSettingsIntent.new({payment_types: ['ACH']})})}) # PFLitePaymentLinkRequest | Payment Link Request
+pf_lite_payment_link_request = OpenapiClient::PFLitePaymentLinkRequest.new({quote_key: 'quote_key_example', title: 'title_example', payment_description: 'payment_description_example', expire_in: 37, expire_in_unit: 'NA', reference_data_list: [OpenapiClient::PFLitePaymentLinkRequestReferenceDataListInner.new({reference_type: 'None', reference_key: 'reference_key_example'})], settings: OpenapiClient::PFLitePaymentLinkRequestSettings.new({selected_customer_fields: 'selected_customer_fields_example', additional_details_preference: 'None', intent: OpenapiClient::PaymentLinkRequestSettingsIntent.new({payment_types: ['ACH']})})}) # PFLitePaymentLinkRequest | Payment Link Request
 
 begin
   # This API is used to create Payment Links

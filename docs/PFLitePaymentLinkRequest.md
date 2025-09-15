@@ -8,7 +8,7 @@
 | **is_pay_in_full** | **Boolean** |  | [optional] |
 | **title** | **String** |  |  |
 | **payment_description** | **String** |  |  |
-| **expire_in** | **String** |  |  |
+| **expire_in** | **Integer** |  |  |
 | **expire_in_unit** | **String** |  |  |
 | **reference_data_list** | [**Array&lt;PFLitePaymentLinkRequestReferenceDataListInner&gt;**](PFLitePaymentLinkRequestReferenceDataListInner.md) |  |  |
 | **callback_parameters** | [**PFLitePaymentLinkRequestCallbackParameters**](PFLitePaymentLinkRequestCallbackParameters.md) |  | [optional] |

@@ -133,7 +133,7 @@ module OpenapiClient
         :'coverage' => :'String',
         :'effective_date' => :'String',
         :'expiration_date' => :'String',
-        :'term' => :'Float',
+        :'term' => :'Integer',
         :'minimum_earned' => :'Float',
         :'minimum_earned_percent' => :'Float',
         :'auditable' => :'Boolean',

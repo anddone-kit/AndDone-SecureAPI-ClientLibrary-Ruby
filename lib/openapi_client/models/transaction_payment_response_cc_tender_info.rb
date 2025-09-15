@@ -136,7 +136,7 @@ module OpenapiClient
         :'account_token' => :'String',
         :'account_token_message' => :'String',
         :'create_account_token' => :'Boolean',
-        :'commission_type' => :'String',
+        :'commission_type' => :'TransactionPaymentResponseAchTenderInfoCommissionType',
         :'commission_value' => :'Float',
         :'commission_fixed_value' => :'Float'
       }
@@ -266,8 +266,6 @@ module OpenapiClient
       warn '[DEPRECATED] the `valid?` method is obsolete'
       payment_adjustment_type_validator = EnumAttributeValidator.new('String', ["None", "CashIncentive", "Surcharge", "ConvenienceFee", "CashDiscount"])
       return false unless payment_adjustment_type_validator.valid?(@payment_adjustment_type)
-      commission_type_validator = EnumAttributeValidator.new('String', ["Fixed", "Percentage"])
-      return false unless commission_type_validator.valid?(@commission_type)
       true
     end
 
@@ -279,16 +277,6 @@ module OpenapiClient
         fail ArgumentError, "invalid value for \"payment_adjustment_type\", must be one of #{validator.allowable_values}."
       end
       @payment_adjustment_type = payment_adjustment_type
-    end
-
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] commission_type Object to be assigned
-    def commission_type=(commission_type)
-      validator = EnumAttributeValidator.new('String', ["Fixed", "Percentage"])
-      unless validator.valid?(commission_type)
-        fail ArgumentError, "invalid value for \"commission_type\", must be one of #{validator.allowable_values}."
-      end
-      @commission_type = commission_type
     end
 
     # Checks equality by comparing each attribute.

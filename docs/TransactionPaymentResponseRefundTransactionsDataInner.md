@@ -57,7 +57,7 @@
 | **adjustment_display_name** | **String** |  | [optional] |
 | **adjustment_descriptor_message** | **String** |  | [optional] |
 | **payment_adjustment_type** | **String** |  | [optional] |
-| **commission_type** | **String** |  | [optional] |
+| **commission_type** | [**TransactionPaymentResponseAchTenderInfoCommissionType**](TransactionPaymentResponseAchTenderInfoCommissionType.md) |  | [optional] |
 | **commission_value** | **Float** |  | [optional] |
 | **commission_fixed_value** | **Float** |  | [optional] |
 | **account_token** | **String** |  | [optional] |

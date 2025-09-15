@@ -7,7 +7,7 @@
 | **is_success_status_code** | **Boolean** |  | [optional] |
 | **message** | **String** |  | [optional] |
 | **error_code** | **String** |  | [optional] |
-| **status_code** | **String** |  | [optional] |
+| **status_code** | **Float** |  | [optional] |
 
 ## Example
 

@@ -169,7 +169,7 @@ module OpenapiClient
         :'process_method' => :'String',
         :'processor_name' => :'String',
         :'transaction_origin' => :'String',
-        :'refund_origin' => :'Integer',
+        :'refund_origin' => :'TransactionPaymentResponseRefundOrigin',
         :'ach_tender_info' => :'TransactionPaymentResponseAchTenderInfo',
         :'cc_tender_info' => :'TransactionPaymentResponseCcTenderInfo',
         :'debit_card_tender_info' => :'TransactionPaymentResponseCcTenderInfo',
