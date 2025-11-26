@@ -68,7 +68,7 @@ module OpenapiClient
         :'transaction_id' => :'String',
         :'callback_api_url' => :'String',
         :'callback_message' => :'String',
-        :'redirection_time' => :'Float'
+        :'redirection_time' => :'Integer'
       }
     end
 

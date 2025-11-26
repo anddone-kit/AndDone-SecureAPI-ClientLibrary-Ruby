@@ -21,18 +21,6 @@ This API is used for getting Payment Links by PaymentLink ID
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecurePaymentLinksApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -84,7 +72,7 @@ end
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -103,18 +91,6 @@ This API is used for to set expired payment link
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecurePaymentLinksApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -168,7 +144,7 @@ end
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -187,18 +163,6 @@ This API is used to update Payment Links
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecurePaymentLinksApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -252,7 +216,7 @@ end
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -271,25 +235,13 @@ This API is used to create Payment Links
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecurePaymentLinksApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
 x_app_key = 'x_app_key_example' # String | an authorization header
 x_version = 8.14 # Float | x-version
 origin = 'origin_example' # String | origin
-payment_link_request = OpenapiClient::PaymentLinkRequest.new({merchant_id: 'merchant_id_example', title: 'title_example', amount: 3.56, expire_in: 37, expire_in_unit: 'Seconds', settings: OpenapiClient::PaymentLinkRequestSettings.new({intent: OpenapiClient::PaymentLinkRequestSettingsIntent.new({payment_types: ['ACH']})}), reference_data_list: [OpenapiClient::PaymentLinkResponseReferenceDataListInner.new]}) # PaymentLinkRequest | Payment Link Request
+payment_link_request = OpenapiClient::PaymentLinkRequest.new({merchant_id: 'merchant_id_example', title: 'title_example', amount: 3.56, payment_description: 'payment_description_example', expire_in: 37, expire_in_unit: 'Seconds', settings: OpenapiClient::PaymentLinkRequestSettings.new({intent: OpenapiClient::PaymentLinkRequestSettingsIntent.new({payment_types: ['ACH']})}), reference_data_list: [OpenapiClient::PaymentLinkRequestReferenceDataListInner.new({reference_type: 'QuoteId', reference_number: 'reference_number_example'})]}) # PaymentLinkRequest | Payment Link Request
 
 begin
   # This API is used to create Payment Links
@@ -334,7 +286,7 @@ end
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 

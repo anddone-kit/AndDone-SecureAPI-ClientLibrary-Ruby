@@ -20,18 +20,6 @@ This API will do a check of eligibility of account
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecureEmbeddedPremiumFinanceEndorsementsApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -83,7 +71,7 @@ end
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -93,7 +81,7 @@ end
 
 ## secure_epf_quote_endorsement_booking_put
 
-> <PFUpdatePFAResponse> secure_epf_quote_endorsement_booking_put(x_api_key, x_app_key, x_version, origin, pf_quote_booking_request)
+> <PFUpdatePFAResponse> secure_epf_quote_endorsement_booking_put(x_api_key, x_app_key, x_version, origin, secure_pf_quote_booking_request)
 
 This API will update PFA to book a endorsement quote.
 
@@ -102,29 +90,17 @@ This API will update PFA to book a endorsement quote.
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecureEmbeddedPremiumFinanceEndorsementsApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
 x_app_key = 'x_app_key_example' # String | an authorization header
 x_version = 8.14 # Float | x-version
 origin = 'origin_example' # String | origin
-pf_quote_booking_request = OpenapiClient::PFQuoteBookingRequest.new({quote_key: 37}) # PFQuoteBookingRequest | PFQuoteBooking Request details
+secure_pf_quote_booking_request = OpenapiClient::SecurePFQuoteBookingRequest.new({quote_key: 37}) # SecurePFQuoteBookingRequest | PFQuoteBooking Request details
 
 begin
   # This API will update PFA to book a endorsement quote.
-  result = api_instance.secure_epf_quote_endorsement_booking_put(x_api_key, x_app_key, x_version, origin, pf_quote_booking_request)
+  result = api_instance.secure_epf_quote_endorsement_booking_put(x_api_key, x_app_key, x_version, origin, secure_pf_quote_booking_request)
   p result
 rescue OpenapiClient::ApiError => e
   puts "Error when calling SecureEmbeddedPremiumFinanceEndorsementsApi->secure_epf_quote_endorsement_booking_put: #{e}"
@@ -135,12 +111,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<PFUpdatePFAResponse>, Integer, Hash)> secure_epf_quote_endorsement_booking_put_with_http_info(x_api_key, x_app_key, x_version, origin, pf_quote_booking_request)
+> <Array(<PFUpdatePFAResponse>, Integer, Hash)> secure_epf_quote_endorsement_booking_put_with_http_info(x_api_key, x_app_key, x_version, origin, secure_pf_quote_booking_request)
 
 ```ruby
 begin
   # This API will update PFA to book a endorsement quote.
-  data, status_code, headers = api_instance.secure_epf_quote_endorsement_booking_put_with_http_info(x_api_key, x_app_key, x_version, origin, pf_quote_booking_request)
+  data, status_code, headers = api_instance.secure_epf_quote_endorsement_booking_put_with_http_info(x_api_key, x_app_key, x_version, origin, secure_pf_quote_booking_request)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PFUpdatePFAResponse>
@@ -157,7 +133,7 @@ end
 | **x_app_key** | **String** | an authorization header |  |
 | **x_version** | **Float** | x-version |  |
 | **origin** | **String** | origin |  |
-| **pf_quote_booking_request** | [**PFQuoteBookingRequest**](PFQuoteBookingRequest.md) | PFQuoteBooking Request details |  |
+| **secure_pf_quote_booking_request** | [**SecurePFQuoteBookingRequest**](SecurePFQuoteBookingRequest.md) | PFQuoteBooking Request details |  |
 
 ### Return type
 
@@ -165,7 +141,7 @@ end
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -184,25 +160,13 @@ This API will do return a quote for an existing policy or new policy for an exis
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecureEmbeddedPremiumFinanceEndorsementsApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
 x_app_key = 'x_app_key_example' # String | an authorization header
 x_version = 8.14 # Float | x-version
 origin = 'origin_example' # String | origin
-pf_endorsement_request = OpenapiClient::PFEndorsementRequest.new({quote: OpenapiClient::PFEndorsementRequestQuote.new({agreement_id: 'agreement_id_example', merchant_reference: 'merchant_reference_example', policies: [OpenapiClient::PFEndorsementRequestQuotePoliciesInner.new({premium: 3.56, effective_date: 'effective_date_example', expiration_date: 'expiration_date_example'})]})}) # PFEndorsementRequest | PF Endorsement Request details
+pf_endorsement_request = OpenapiClient::PFEndorsementRequest.new({quote: OpenapiClient::PFEndorsementRequestQuote.new({agreement_id: 37, merchant_reference: 'merchant_reference_example', policies: [OpenapiClient::PFEndorsementRequestQuotePoliciesInner.new({premium: 3.56, effective_date: 'effective_date_example', expiration_date: 'expiration_date_example'})]})}) # PFEndorsementRequest | PF Endorsement Request details
 
 begin
   # This API will do return a quote for an existing policy or new policy for an existing account
@@ -247,7 +211,7 @@ end
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 

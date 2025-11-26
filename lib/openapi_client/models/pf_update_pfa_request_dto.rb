@@ -33,7 +33,7 @@ module OpenapiClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'quote_key' => :'Integer'
+        :'quote_key' => :'Float'
       }
     end
 

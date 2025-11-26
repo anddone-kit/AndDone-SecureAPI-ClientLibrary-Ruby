@@ -9,7 +9,7 @@
 | **batch_id** | **String** | The batch ID associated with the eSign process. | [optional] |
 | **agent_url** | **String** | The URL for the agent to sign. | [optional] |
 | **insured_url** | **String** | The URL for the insured to sign. | [optional] |
-| **e_sign_option** | **Float** | The option chosen for eSign. | [optional] |
+| **e_sign_option** | **Integer** | The option chosen for eSign. | [optional] |
 
 ## Example
 

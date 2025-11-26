@@ -7,11 +7,11 @@
 | **commercial** | **String** | This denotes the Commercial. | [optional] |
 | **coupon** | **String** | This denotes the Coupon. | [optional] |
 | **coupon_invoice_printed** | **Boolean** | This denotes the flag if invoice printed or not. | [optional] |
-| **crd** | **Float** | This denotes the Crd. | [optional] |
+| **crd** | **Integer** | This denotes the Crd. | [optional] |
 | **interval** | **String** | This denotes the Interval. | [optional] |
 | **installments** | **Integer** | This denotes the number of installments. | [optional] |
-| **program_id** | **Float** | This denotes the program ID. | [optional] |
-| **broker_fee** | **Float** | This denotes the broker fees. | [optional] |
+| **program_id** | **Integer** | This denotes the program ID. | [optional] |
+| **broker_fee** | **Integer** | This denotes the broker fees. | [optional] |
 | **e_sign_option** | **String** | This denotes the eSign Option. | [optional] |
 | **process_down_payment** | **Boolean** | This denotes the flag that down payment is processed or not. | [optional] |
 | **process_down_payment_no_reason** | **String** | This denotes the Process Down Payment No Reason. | [optional] |
@@ -21,7 +21,7 @@
 | **batch_id** | **String** | This denotes the batch ID. | [optional] |
 | **return_pfa** | **Boolean** | This denotes the flag whether to return PFA or not. | [optional] |
 | **equal_payments** | **String** | This denotes the equal payments. | [optional] |
-| **quote_expiration_days** | **Float** | This denotes the number of days to expire. | [optional] |
+| **quote_expiration_days** | **Integer** | This denotes the number of days to expire. | [optional] |
 | **bypass_cadnb** | **Boolean** | This denotes the flag whether to bypass CADNB. | [optional] |
 | **allow_zero_apr** | **Boolean** | This denotes the Allow Zero APR. | [optional] |
 | **associated_account_number** | **String** | This denotes the associated account number. | [optional] |

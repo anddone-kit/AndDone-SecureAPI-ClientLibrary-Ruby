@@ -185,7 +185,7 @@ module OpenapiClient
         :'expire_in_unit' => :'String',
         :'expire_on' => :'String',
         :'payments' => :'Array<PaymentLinkResponsePaymentsInner>',
-        :'no_of_payment_made' => :'Float',
+        :'no_of_payment_made' => :'Integer',
         :'total_paid_amount' => :'Float',
         :'link_status' => :'String',
         :'invoice_number' => :'String',

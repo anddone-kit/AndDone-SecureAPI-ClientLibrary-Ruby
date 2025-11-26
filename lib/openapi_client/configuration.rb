@@ -248,14 +248,14 @@ module OpenapiClient
     # Returns Auth Settings hash for api client.
     def auth_settings
       {
-        'x-api-key' =>
+        'api-key' =>
           {
             type: 'api_key',
             in: 'header',
             key: 'x-api-key',
             value: api_key_with_prefix('x-api-key')
           },
-        'x-app-key' =>
+        'app-key' =>
           {
             type: 'api_key',
             in: 'header',

@@ -60,7 +60,7 @@ module OpenapiClient
         :'reference_no' => :'String',
         :'reference_type' => :'String',
         :'transaction_id' => :'String',
-        :'redirection_time' => :'Float'
+        :'redirection_time' => :'Integer'
       }
     end
 

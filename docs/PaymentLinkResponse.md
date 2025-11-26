@@ -15,7 +15,7 @@
 | **expire_in_unit** | **String** |  | [optional] |
 | **expire_on** | **String** |  | [optional] |
 | **payments** | [**Array&lt;PaymentLinkResponsePaymentsInner&gt;**](PaymentLinkResponsePaymentsInner.md) |  | [optional] |
-| **no_of_payment_made** | **Float** |  | [optional] |
+| **no_of_payment_made** | **Integer** |  | [optional] |
 | **total_paid_amount** | **Float** |  | [optional] |
 | **link_status** | **String** |  | [optional] |
 | **invoice_number** | **String** |  | [optional] |

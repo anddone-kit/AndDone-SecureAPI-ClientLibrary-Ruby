@@ -22,7 +22,7 @@
 | **use_same_as_physical_address** | **Boolean** |  | [optional] |
 | **physical_address** | [**VendorResponseDTORemittanceAddress**](VendorResponseDTORemittanceAddress.md) |  | [optional] |
 | **remittance_address** | [**VendorResponseDTORemittanceAddress**](VendorResponseDTORemittanceAddress.md) |  | [optional] |
-| **verification_results** | [**Array&lt;VendorResponseDTOVerificationResultsInner&gt;**](VendorResponseDTOVerificationResultsInner.md) |  | [optional] |
+| **verification_results** | [**VendorResponseDTOVerificationResultsInner**](VendorResponseDTOVerificationResultsInner.md) |  | [optional] |
 | **created_by** | **String** |  | [optional] |
 | **modified_by** | **String** |  | [optional] |
 | **created_on** | **String** |  | [optional] |

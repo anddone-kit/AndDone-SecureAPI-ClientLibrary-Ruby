@@ -30,6 +30,7 @@
 | **apr** | **Float** | The annual percentage rate (APR). | [optional] |
 | **installments** | **Integer** | The number of installments. | [optional] |
 | **batch_id** | **String** | The batch ID. | [optional] |
+| **autopay_status** | **String** | The autopayStatus. | [optional] |
 | **payments_retained** | **Integer** | The number of payments retained. | [optional] |
 | **payment_retained_amount** | **Float** | The amount retained from the payment. | [optional] |
 | **retail_agent_register_login_url** | **String** | The URL for the retail agent register login. | [optional] |
@@ -40,6 +41,7 @@
 | **is_down_payment_required** | **Boolean** | Indicates if a down payment is required. | [optional] |
 | **is_esign_required** | **Boolean** | Indicates if eSign is required. | [optional] |
 | **is_deleted** | **Boolean** | Indicates if the quote is deleted. | [optional] |
+| **offer_auto_pay** | **Boolean** | The OfferAutoPay Status. | [optional] |
 | **created_on** | **String** | The date when the quote was created. | [optional] |
 | **created_by** | **String** | The user who created the quote. | [optional] |
 | **modified_on** | **String** | The date when the quote was last modified. | [optional] |
@@ -79,6 +81,7 @@ instance = OpenapiClient::QuoteResponse.new(
   apr: null,
   installments: null,
   batch_id: null,
+  autopay_status: null,
   payments_retained: null,
   payment_retained_amount: null,
   retail_agent_register_login_url: null,
@@ -89,6 +92,7 @@ instance = OpenapiClient::QuoteResponse.new(
   is_down_payment_required: null,
   is_esign_required: null,
   is_deleted: null,
+  offer_auto_pay: null,
   created_on: null,
   created_by: null,
   modified_on: null,

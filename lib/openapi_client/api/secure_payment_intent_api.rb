@@ -90,7 +90,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'PaymentIntentExpiresResponse'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecurePaymentIntentApi.secure_paymentintents_expirations_post",
@@ -180,7 +180,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'PaymentIntentResponse'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecurePaymentIntentApi.secure_paymentintents_post",

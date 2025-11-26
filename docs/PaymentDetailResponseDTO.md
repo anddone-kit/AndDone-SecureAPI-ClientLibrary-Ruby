@@ -9,7 +9,7 @@
 | **vendor_name** | **String** |  | [optional] |
 | **merchant_dba_name** | **String** |  | [optional] |
 | **payment_id** | **String** |  | [optional] |
-| **check_number** | **Float** |  | [optional] |
+| **check_number** | **Integer** |  | [optional] |
 | **payment_method** | **String** |  | [optional] |
 | **amount** | **Float** |  | [optional] |
 | **bank_name** | **String** |  | [optional] |

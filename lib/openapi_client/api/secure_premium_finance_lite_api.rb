@@ -90,7 +90,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'PFLiteGenerateQuoteResponse'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecurePremiumFinanceLiteApi.secure_epflite_quotes_generate_post",
@@ -180,7 +180,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'Array<PFLiteQuoteByPaymentLinkResponse>'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecurePremiumFinanceLiteApi.secure_epflite_quotes_link_post",
@@ -274,7 +274,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'PaymentLinkResponse'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecurePremiumFinanceLiteApi.secure_epflite_quotes_paymentlinks_post",

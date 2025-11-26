@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **quote_key** | **Float** |  | [optional] |
+| **quote_key** | **Integer** |  | [optional] |
 | **premium** | **Float** |  | [optional] |
 | **down_amount** | **Float** |  | [optional] |
 | **amount_financed** | **Float** |  | [optional] |
@@ -16,7 +16,7 @@
 | **apr** | **Float** |  | [optional] |
 | **installments** | **Integer** |  | [optional] |
 | **batch_id** | **String** |  | [optional] |
-| **payments_retained** | **Float** |  | [optional] |
+| **payments_retained** | **Integer** |  | [optional] |
 | **payment_retained_amount** | **Float** |  | [optional] |
 | **unsigned_pfa_url** | **String** |  | [optional] |
 | **retail_agent_register_login_url** | **String** |  | [optional] |
@@ -24,6 +24,7 @@
 | **errors** | **String** |  | [optional] |
 | **pfa** | **String** |  | [optional] |
 | **electronic_signature_url** | **String** |  | [optional] |
+| **offer_auto_pay** | **Boolean** |  | [optional] |
 
 ## Example
 
@@ -50,7 +51,8 @@ instance = OpenapiClient::PFLiteGenerateQuoteResponseItem.new(
   e_sign_result: null,
   errors: null,
   pfa: null,
-  electronic_signature_url: null
+  electronic_signature_url: null,
+  offer_auto_pay: null
 )
 ```
 

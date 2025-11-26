@@ -152,7 +152,7 @@ module OpenapiClient
         :'payment_description' => :'String',
         :'customers' => :'Array<PaymentLinkResponseCustomersInner>',
         :'invoice_number' => :'String',
-        :'expire_by' => :'Float',
+        :'expire_by' => :'Integer',
         :'expire_on' => :'String',
         :'line_items' => :'Array<PaymentLinkResponseLineItemsInner>',
         :'short_description' => :'String',

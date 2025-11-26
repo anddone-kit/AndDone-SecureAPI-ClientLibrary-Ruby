@@ -21,18 +21,6 @@ This API gets Secure payment by search criteria for the merchant.
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecurePaymentsApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -62,7 +50,7 @@ opts = {
   export_to_pdf: true, # Boolean | Export To PDF
   transaction_origins: 'transaction_origins_example', # String | Type of origin used in the transaction
   transaction_source_type: 'Independent', # String | Transaction source type of the transaction
-  source_id: 8.14, # Float | Set SourceId
+  source_id: 56, # Integer | Set SourceId
   trace_numbers: 'trace_numbers_example', # String | TraceNumbers associated with the transaction
   bin_number: 'bin_number_example', # String | BinNumber
   process_method: 'NotDefined', # String | Process Method used for the transaction
@@ -80,7 +68,7 @@ opts = {
   batch_id: 'batch_id_example', # String | BatchId
   sort_field: 'sort_field_example', # String | SortField
   start_row: 56, # Integer | Set StartRow
-  page_size: 8.14, # Float | Set PageSize
+  page_size: 56, # Integer | Set PageSize
   asc: true # Boolean | Set Asc
 }
 
@@ -140,7 +128,7 @@ end
 | **export_to_pdf** | **Boolean** | Export To PDF | [optional] |
 | **transaction_origins** | **String** | Type of origin used in the transaction | [optional] |
 | **transaction_source_type** | **String** | Transaction source type of the transaction | [optional] |
-| **source_id** | **Float** | Set SourceId | [optional] |
+| **source_id** | **Integer** | Set SourceId | [optional] |
 | **trace_numbers** | **String** | TraceNumbers associated with the transaction | [optional] |
 | **bin_number** | **String** | BinNumber | [optional] |
 | **process_method** | **String** | Process Method used for the transaction | [optional] |
@@ -158,7 +146,7 @@ end
 | **batch_id** | **String** | BatchId | [optional] |
 | **sort_field** | **String** | SortField | [optional] |
 | **start_row** | **Integer** | Set StartRow | [optional] |
-| **page_size** | **Float** | Set PageSize | [optional] |
+| **page_size** | **Integer** | Set PageSize | [optional] |
 | **asc** | **Boolean** | Set Asc | [optional] |
 
 ### Return type
@@ -167,7 +155,7 @@ nil (empty response body)
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -186,25 +174,13 @@ This API posts new Secure payment request for the merchant.
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecurePaymentsApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
 x_app_key = 'x_app_key_example' # String | an authorization header
 x_version = 8.14 # Float | x-version
 origin = 'origin_example' # String | origin
-payment_request = OpenapiClient::PaymentRequest.new({type: 'AnytimePayment', transaction_code: 'transaction_code_example', channel_type: 'CreditCard', tender_info: OpenapiClient::PaymentRequestTenderInfo.new}) # PaymentRequest | Payment Detail
+payment_request = OpenapiClient::PaymentRequest.new({type: 'AnytimePayment', transaction_code: 'transaction_code_example', channel_type: 'CreditCard', tender_info: OpenapiClient::PaymentRequestTenderInfo.new({amount: 3.56})}) # PaymentRequest | Payment Detail
 
 begin
   # This API posts new Secure payment request for the merchant.
@@ -249,7 +225,7 @@ end
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -268,18 +244,6 @@ This API gets Secure payment by search criteria for the merchant.
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecurePaymentsApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -309,7 +273,7 @@ opts = {
   export_to_pdf: true, # Boolean | Export To PDF
   transaction_origins: 'transaction_origins_example', # String | Type of origin used in the transaction
   transaction_source_type: 'Independent', # String | Transaction source type of the transaction
-  source_id: 8.14, # Float | Set SourceId
+  source_id: 56, # Integer | Set SourceId
   trace_numbers: 'trace_numbers_example', # String | TraceNumbers associated with the transaction
   bin_number: 'bin_number_example', # String | BinNumber
   process_method: 'NotDefined', # String | Process Method used for the transaction
@@ -325,9 +289,10 @@ opts = {
   payment_categories: 'payment_categories_example', # String | Set PaymentCategories
   suppress_technology_fee: true, # Boolean | SuppressTechnologyFee
   batch_id: 'batch_id_example', # String | BatchId
+  transactions_count: true, # Boolean | Set whether to return only the transactions count
   sort_field: 'sort_field_example', # String | SortField
   start_row: 56, # Integer | Set StartRow
-  page_size: 8.14, # Float | Set PageSize
+  page_size: 56, # Integer | Set PageSize
   asc: true # Boolean | Set Asc
 }
 
@@ -388,7 +353,7 @@ end
 | **export_to_pdf** | **Boolean** | Export To PDF | [optional] |
 | **transaction_origins** | **String** | Type of origin used in the transaction | [optional] |
 | **transaction_source_type** | **String** | Transaction source type of the transaction | [optional] |
-| **source_id** | **Float** | Set SourceId | [optional] |
+| **source_id** | **Integer** | Set SourceId | [optional] |
 | **trace_numbers** | **String** | TraceNumbers associated with the transaction | [optional] |
 | **bin_number** | **String** | BinNumber | [optional] |
 | **process_method** | **String** | Process Method used for the transaction | [optional] |
@@ -404,9 +369,10 @@ end
 | **payment_categories** | **String** | Set PaymentCategories | [optional] |
 | **suppress_technology_fee** | **Boolean** | SuppressTechnologyFee | [optional] |
 | **batch_id** | **String** | BatchId | [optional] |
+| **transactions_count** | **Boolean** | Set whether to return only the transactions count | [optional] |
 | **sort_field** | **String** | SortField | [optional] |
 | **start_row** | **Integer** | Set StartRow | [optional] |
-| **page_size** | **Float** | Set PageSize | [optional] |
+| **page_size** | **Integer** | Set PageSize | [optional] |
 | **asc** | **Boolean** | Set Asc | [optional] |
 
 ### Return type
@@ -415,7 +381,7 @@ end
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -434,18 +400,6 @@ This API is used for getting details of Payments
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecurePaymentsApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -497,7 +451,7 @@ end
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 

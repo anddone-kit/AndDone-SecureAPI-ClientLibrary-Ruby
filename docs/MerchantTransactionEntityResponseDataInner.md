@@ -15,7 +15,7 @@
 | **reference_transaction_id** | **String** |  | [optional] |
 | **reference_customer_id** | **String** |  | [optional] |
 | **recurring_id** | **String** |  | [optional] |
-| **batch_id** | **Float** |  | [optional] |
+| **batch_id** | **Integer** |  | [optional] |
 | **transaction_status** | **String** |  | [optional] |
 | **settlement_date** | **String** |  | [optional] |
 | **auth_code** | **String** |  | [optional] |

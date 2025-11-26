@@ -22,18 +22,6 @@ This API is used for getting Secure Payment Batch Details
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecurePaymentBatchingApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -85,7 +73,7 @@ end
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -104,18 +92,6 @@ This API execute on-demand batch transaction.
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecurePaymentBatchingApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -166,7 +142,7 @@ nil (empty response body)
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -185,18 +161,6 @@ This API is used for getting Secure Payment Batches
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecurePaymentBatchingApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -204,8 +168,8 @@ x_app_key = 'x_app_key_example' # String | an authorization header
 x_version = 8.14 # Float | x-version
 origin = 'origin_example' # String | origin
 opts = {
-  start_row: 8.14, # Float | Set StartRow
-  page_size: 8.14, # Float | Set PageSize
+  start_row: 56, # Integer | Set StartRow
+  page_size: 56, # Integer | Set PageSize
   sort_field: 'sort_field_example', # String | Set SortField
   asc: true # Boolean | Set Asc
 }
@@ -245,8 +209,8 @@ end
 | **x_app_key** | **String** | an authorization header |  |
 | **x_version** | **Float** | x-version |  |
 | **origin** | **String** | origin |  |
-| **start_row** | **Float** | Set StartRow | [optional] |
-| **page_size** | **Float** | Set PageSize | [optional] |
+| **start_row** | **Integer** | Set StartRow | [optional] |
+| **page_size** | **Integer** | Set PageSize | [optional] |
 | **sort_field** | **String** | Set SortField | [optional] |
 | **asc** | **Boolean** | Set Asc | [optional] |
 
@@ -256,7 +220,7 @@ end
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -275,18 +239,6 @@ This API will returns batch timeline.
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecurePaymentBatchingApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -338,7 +290,7 @@ end
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -357,18 +309,6 @@ This API cancels transactions from an active batch.
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecurePaymentBatchingApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -419,7 +359,7 @@ nil (empty response body)
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 

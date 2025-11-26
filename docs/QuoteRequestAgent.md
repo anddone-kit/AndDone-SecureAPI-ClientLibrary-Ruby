@@ -6,7 +6,7 @@
 | ---- | ---- | ----------- | ----- |
 | **unique_id** | **String** |  | [optional] |
 | **email** | **String** |  | [optional] |
-| **address** | [**QuoteRequestAgentAddress**](QuoteRequestAgentAddress.md) |  | [optional] |
+| **address** | [**QuoteRequestInsuredAddress**](QuoteRequestInsuredAddress.md) |  | [optional] |
 
 ## Example
 

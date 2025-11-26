@@ -9,7 +9,7 @@
 | **payment_description** | **String** |  | [optional] |
 | **customers** | [**Array&lt;PaymentLinkResponseCustomersInner&gt;**](PaymentLinkResponseCustomersInner.md) |  | [optional] |
 | **invoice_number** | **String** |  | [optional] |
-| **expire_by** | **Float** |  | [optional] |
+| **expire_by** | **Integer** |  | [optional] |
 | **expire_on** | **String** |  | [optional] |
 | **line_items** | [**Array&lt;PaymentLinkResponseLineItemsInner&gt;**](PaymentLinkResponseLineItemsInner.md) |  | [optional] |
 | **short_description** | **String** |  | [optional] |

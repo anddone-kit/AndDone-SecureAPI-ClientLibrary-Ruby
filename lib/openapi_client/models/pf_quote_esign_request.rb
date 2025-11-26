@@ -36,6 +36,9 @@ module OpenapiClient
     # This denotes the action name.
     attr_accessor :action_name
 
+    # This denotes isSignAPA status.
+    attr_accessor :is_sign_apa
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -45,7 +48,8 @@ module OpenapiClient
         :'ip_address' => :'ipAddress',
         :'mac_address' => :'macAddress',
         :'captcha_token' => :'captchaToken',
-        :'action_name' => :'actionName'
+        :'action_name' => :'actionName',
+        :'is_sign_apa' => :'isSignAPA'
       }
     end
 
@@ -63,7 +67,8 @@ module OpenapiClient
         :'ip_address' => :'String',
         :'mac_address' => :'String',
         :'captcha_token' => :'String',
-        :'action_name' => :'String'
+        :'action_name' => :'String',
+        :'is_sign_apa' => :'Boolean'
       }
     end
 
@@ -119,6 +124,10 @@ module OpenapiClient
       if attributes.key?(:'action_name')
         self.action_name = attributes[:'action_name']
       end
+
+      if attributes.key?(:'is_sign_apa')
+        self.is_sign_apa = attributes[:'is_sign_apa']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -157,7 +166,8 @@ module OpenapiClient
           ip_address == o.ip_address &&
           mac_address == o.mac_address &&
           captcha_token == o.captcha_token &&
-          action_name == o.action_name
+          action_name == o.action_name &&
+          is_sign_apa == o.is_sign_apa
     end
 
     # @see the `==` method
@@ -169,7 +179,7 @@ module OpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [merchant_token, quote_key, insured_name, ip_address, mac_address, captcha_token, action_name].hash
+      [merchant_token, quote_key, insured_name, ip_address, mac_address, captcha_token, action_name, is_sign_apa].hash
     end
 
     # Builds the object from hash

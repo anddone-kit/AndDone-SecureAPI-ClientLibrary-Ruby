@@ -11,7 +11,7 @@
 | **reference_no** | **String** |  | [optional] |
 | **reference_type** | **String** |  | [optional] |
 | **transaction_id** | **String** |  | [optional] |
-| **redirection_time** | **Float** |  | [optional] |
+| **redirection_time** | **Integer** |  | [optional] |
 
 ## Example
 

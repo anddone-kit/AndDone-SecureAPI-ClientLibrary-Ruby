@@ -27,8 +27,8 @@
 | **remarks** | **String** |  | [optional] |
 | **recurring_type** | **String** |  | [optional] |
 | **recurring_id** | **String** |  | [optional] |
-| **installment_number** | **Float** |  | [optional] |
-| **installment_count** | **Float** |  | [optional] |
+| **installment_number** | **Integer** |  | [optional] |
+| **installment_count** | **Integer** |  | [optional] |
 | **allow_duplicates** | **Boolean** |  | [optional] |
 | **verification_enabled** | **Boolean** |  | [optional] |
 | **sent_success_notification** | **Boolean** |  | [optional] |
@@ -39,7 +39,7 @@
 | **transaction_status** | **String** |  | [optional] |
 | **previous_transaction_status** | **String** |  | [optional] |
 | **transaction_result** | [**TransactionPaymentResponseTransactionResult**](TransactionPaymentResponseTransactionResult.md) |  | [optional] |
-| **level** | **Float** |  | [optional] |
+| **level** | **Integer** |  | [optional] |
 | **partner_id** | **String** |  | [optional] |
 | **order_id** | **String** |  | [optional] |
 | **invoice_id** | **String** |  | [optional] |

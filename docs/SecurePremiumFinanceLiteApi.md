@@ -20,18 +20,6 @@ This API is used to generate the quote from the provider.
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecurePremiumFinanceLiteApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -85,7 +73,7 @@ end
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -104,18 +92,6 @@ This API will return quotes created againsts a payment link.
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecurePremiumFinanceLiteApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -169,7 +145,7 @@ end
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -188,18 +164,6 @@ This API is used to create Payment Links
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecurePremiumFinanceLiteApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -251,7 +215,7 @@ end
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 

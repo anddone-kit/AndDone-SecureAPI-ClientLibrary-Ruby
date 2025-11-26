@@ -111,14 +111,14 @@ module OpenapiClient
         :'created_by' => :'String',
         :'modified_on' => :'String',
         :'modified_by' => :'String',
-        :'capture_count' => :'Float',
+        :'capture_count' => :'Integer',
         :'capture_amount' => :'Float',
-        :'voided_count' => :'Float',
+        :'voided_count' => :'Integer',
         :'voided_amount' => :'Float',
         :'total_live_amount' => :'Float',
-        :'refunded_count' => :'Float',
+        :'refunded_count' => :'Integer',
         :'refunded_amount' => :'Float',
-        :'chargeback_count' => :'Float',
+        :'chargeback_count' => :'Integer',
         :'chargeback_amount' => :'Float',
         :'transaction_details' => :'Array<PaymentBatchDetailsResponseTransactionDetailsInner>'
       }

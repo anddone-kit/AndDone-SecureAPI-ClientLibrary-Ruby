@@ -29,6 +29,8 @@ module OpenapiClient
 
     attr_accessor :created_on
 
+    attr_accessor :company_name
+
     attr_accessor :accounts
 
     attr_accessor :address
@@ -43,6 +45,7 @@ module OpenapiClient
         :'notify_via_sms' => :'notifyViaSMS',
         :'notify_via_email' => :'notifyViaEmail',
         :'created_on' => :'createdOn',
+        :'company_name' => :'companyName',
         :'accounts' => :'accounts',
         :'address' => :'address'
       }
@@ -63,6 +66,7 @@ module OpenapiClient
         :'notify_via_sms' => :'Boolean',
         :'notify_via_email' => :'Boolean',
         :'created_on' => :'String',
+        :'company_name' => :'String',
         :'accounts' => :'Array<PaymentLinkResponseCustomersInnerAccountsInner>',
         :'address' => :'TransactionPaymentResponseBillingContactAddress'
       }
@@ -117,6 +121,10 @@ module OpenapiClient
         self.created_on = attributes[:'created_on']
       end
 
+      if attributes.key?(:'company_name')
+        self.company_name = attributes[:'company_name']
+      end
+
       if attributes.key?(:'accounts')
         if (value = attributes[:'accounts']).is_a?(Array)
           self.accounts = value
@@ -155,6 +163,7 @@ module OpenapiClient
           notify_via_sms == o.notify_via_sms &&
           notify_via_email == o.notify_via_email &&
           created_on == o.created_on &&
+          company_name == o.company_name &&
           accounts == o.accounts &&
           address == o.address
     end
@@ -168,7 +177,7 @@ module OpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [first_name, last_name, email, phone, notify_via_sms, notify_via_email, created_on, accounts, address].hash
+      [first_name, last_name, email, phone, notify_via_sms, notify_via_email, created_on, company_name, accounts, address].hash
     end
 
     # Builds the object from hash

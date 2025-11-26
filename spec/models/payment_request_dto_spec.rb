@@ -36,7 +36,7 @@ describe OpenapiClient::PaymentRequestDto do
   describe 'test attribute "payment_method"' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
-      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["Checks"])
+      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["Check"])
       # validator.allowable_values.each do |value|
       #   expect { instance.payment_method = value }.not_to raise_error
       # end

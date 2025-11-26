@@ -19,18 +19,6 @@ This API expires the payment Intent or link.
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecurePaymentIntentApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -82,7 +70,7 @@ end
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -101,18 +89,6 @@ This API is use to create Secure payment Intent.
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecurePaymentIntentApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -120,7 +96,7 @@ x_app_key = 'x_app_key_example' # String | an authorization header
 x_version = 8.14 # Float | x-version
 origin = 'origin_example' # String | origin
 opts = {
-  payment_intent_request: OpenapiClient::PaymentIntentRequest.new({title: 'title_example', amount: 3.56, intent: OpenapiClient::PaymentIntentRequestIntent.new, additional_details_preference: 'None'}) # PaymentIntentRequest | Payment Intent Request
+  payment_intent_request: OpenapiClient::PaymentIntentRequest.new({title: 'title_example', amount: 3.56, intent: OpenapiClient::PaymentIntentRequestIntent.new({payment_types: ['CreditCard']}), additional_details_preference: 'None'}) # PaymentIntentRequest | Payment Intent Request
 }
 
 begin
@@ -166,7 +142,7 @@ end
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 

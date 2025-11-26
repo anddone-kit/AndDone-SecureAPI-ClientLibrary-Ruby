@@ -55,6 +55,8 @@ module OpenapiClient
 
     attr_accessor :electronic_signature_url
 
+    attr_accessor :offer_auto_pay
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -77,7 +79,8 @@ module OpenapiClient
         :'e_sign_result' => :'eSignResult',
         :'errors' => :'errors',
         :'pfa' => :'pfa',
-        :'electronic_signature_url' => :'electronicSignatureURL'
+        :'electronic_signature_url' => :'electronicSignatureURL',
+        :'offer_auto_pay' => :'offerAutoPay'
       }
     end
 
@@ -89,7 +92,7 @@ module OpenapiClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'quote_key' => :'Float',
+        :'quote_key' => :'Integer',
         :'premium' => :'Float',
         :'down_amount' => :'Float',
         :'amount_financed' => :'Float',
@@ -101,14 +104,15 @@ module OpenapiClient
         :'apr' => :'Float',
         :'installments' => :'Integer',
         :'batch_id' => :'String',
-        :'payments_retained' => :'Float',
+        :'payments_retained' => :'Integer',
         :'payment_retained_amount' => :'Float',
         :'unsigned_pfa_url' => :'String',
         :'retail_agent_register_login_url' => :'String',
         :'e_sign_result' => :'PFLiteGenerateQuoteResponseItemESignResult',
         :'errors' => :'String',
         :'pfa' => :'String',
-        :'electronic_signature_url' => :'String'
+        :'electronic_signature_url' => :'String',
+        :'offer_auto_pay' => :'Boolean'
       }
     end
 
@@ -212,6 +216,10 @@ module OpenapiClient
       if attributes.key?(:'electronic_signature_url')
         self.electronic_signature_url = attributes[:'electronic_signature_url']
       end
+
+      if attributes.key?(:'offer_auto_pay')
+        self.offer_auto_pay = attributes[:'offer_auto_pay']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -253,7 +261,8 @@ module OpenapiClient
           e_sign_result == o.e_sign_result &&
           errors == o.errors &&
           pfa == o.pfa &&
-          electronic_signature_url == o.electronic_signature_url
+          electronic_signature_url == o.electronic_signature_url &&
+          offer_auto_pay == o.offer_auto_pay
     end
 
     # @see the `==` method
@@ -265,7 +274,7 @@ module OpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [quote_key, premium, down_amount, amount_financed, finance_charge, total_payments, payment_amount, doc_stamp, first_due_date, apr, installments, batch_id, payments_retained, payment_retained_amount, unsigned_pfa_url, retail_agent_register_login_url, e_sign_result, errors, pfa, electronic_signature_url].hash
+      [quote_key, premium, down_amount, amount_financed, finance_charge, total_payments, payment_amount, doc_stamp, first_due_date, apr, installments, batch_id, payments_retained, payment_retained_amount, unsigned_pfa_url, retail_agent_register_login_url, e_sign_result, errors, pfa, electronic_signature_url, offer_auto_pay].hash
     end
 
     # Builds the object from hash

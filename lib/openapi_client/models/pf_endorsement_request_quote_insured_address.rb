@@ -33,13 +33,13 @@ module OpenapiClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'name' => :'Name',
-        :'address1' => :'Address1',
-        :'address2' => :'Address2',
-        :'city' => :'City',
-        :'state' => :'State',
-        :'zip' => :'Zip',
-        :'phone' => :'Phone'
+        :'name' => :'name',
+        :'address1' => :'address1',
+        :'address2' => :'address2',
+        :'city' => :'city',
+        :'state' => :'state',
+        :'zip' => :'zip',
+        :'phone' => :'phone'
       }
     end
 

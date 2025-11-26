@@ -38,7 +38,7 @@ module OpenapiClient
         :'state' => :'state',
         :'country' => :'country',
         :'postal_code' => :'postalCode',
-        :'time_zone' => :'TimeZone'
+        :'time_zone' => :'timeZone'
       }
     end
 

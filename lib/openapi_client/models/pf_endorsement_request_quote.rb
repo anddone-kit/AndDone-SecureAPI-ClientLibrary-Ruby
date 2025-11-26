@@ -40,8 +40,8 @@ module OpenapiClient
         :'merchant_reference' => :'merchantReference',
         :'policies' => :'policies',
         :'details' => :'details',
-        :'insured' => :'Insured',
-        :'agent' => :'Agent',
+        :'insured' => :'insured',
+        :'agent' => :'agent',
         :'communication' => :'communication'
       }
     end
@@ -55,12 +55,12 @@ module OpenapiClient
     def self.openapi_types
       {
         :'account_number' => :'String',
-        :'agreement_id' => :'String',
+        :'agreement_id' => :'Integer',
         :'merchant_reference' => :'String',
         :'policies' => :'Array<PFEndorsementRequestQuotePoliciesInner>',
         :'details' => :'PFEndorsementRequestQuoteDetails',
         :'insured' => :'PFEndorsementRequestQuoteInsured',
-        :'agent' => :'PFEndorsementRequestQuoteAgent',
+        :'agent' => :'PFLiteSecureQuoteRequestAgent',
         :'communication' => :'PFEndorsementRequestQuoteCommunication'
       }
     end

@@ -28,11 +28,11 @@ module OpenapiClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'enroll_recurring_ach' => :'EnrollRecurringAch',
-        :'bank_routing_number' => :'BankRoutingNumber',
-        :'bank_acct_number' => :'BankAcctNumber',
-        :'is_checking_account' => :'IsCheckingAccount',
-        :'ach_disclosure' => :'AchDisclosure'
+        :'enroll_recurring_ach' => :'enrollRecurringAch',
+        :'bank_routing_number' => :'bankRoutingNumber',
+        :'bank_acct_number' => :'bankAcctNumber',
+        :'is_checking_account' => :'isCheckingAccount',
+        :'ach_disclosure' => :'achDisclosure'
       }
     end
 

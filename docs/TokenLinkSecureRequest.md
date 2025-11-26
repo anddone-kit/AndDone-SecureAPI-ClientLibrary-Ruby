@@ -9,7 +9,7 @@
 | **expire_in** | **Integer** |  |  |
 | **expire_in_unit** | **String** |  |  |
 | **response_type** | **String** |  | [optional] |
-| **intent** | [**TokenLinkSecureRequestIntent**](TokenLinkSecureRequestIntent.md) |  |  |
+| **intent** | [**PaymentIntentRequestIntent**](PaymentIntentRequestIntent.md) |  |  |
 | **callback_parameters** | [**PaymentLinkResponseCallbackParameters**](PaymentLinkResponseCallbackParameters.md) |  | [optional] |
 | **customers** | [**Array&lt;TokenLinkSecureRequestCustomersInner&gt;**](TokenLinkSecureRequestCustomersInner.md) |  | [optional] |
 

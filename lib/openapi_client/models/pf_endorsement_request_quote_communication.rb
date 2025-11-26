@@ -38,16 +38,16 @@ module OpenapiClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'insured_e_sign_completion_url' => :'InsuredESignCompletionURL',
-        :'payment_portal_cancel_redirect_url' => :'PaymentPortalCancelRedirectURL',
-        :'payment_portal_decline_offer_redirect_url' => :'PaymentPortalDeclineOfferRedirectURL',
-        :'return_insured_e_sign_url' => :'ReturnInsuredESignURL',
-        :'e_sign_auto_start' => :'ESignAutoStart',
-        :'e_sign_start_pick_options' => :'ESignStartPickOptions',
-        :'suppress_insured_e_sign_email' => :'SuppressInsuredESignEmail',
-        :'has_documents_to_upload' => :'HasDocumentsToUpload',
-        :'send_email_to_retail_agent' => :'SendEmailToRetailAgent',
-        :'send_welcome_letter_email_to_insured' => :'SendWelcomeLetterEmailToInsured'
+        :'insured_e_sign_completion_url' => :'insuredESignCompletionURL',
+        :'payment_portal_cancel_redirect_url' => :'paymentPortalCancelRedirectURL',
+        :'payment_portal_decline_offer_redirect_url' => :'paymentPortalDeclineOfferRedirectURL',
+        :'return_insured_e_sign_url' => :'returnInsuredESignURL',
+        :'e_sign_auto_start' => :'eSignAutoStart',
+        :'e_sign_start_pick_options' => :'eSignStartPickOptions',
+        :'suppress_insured_e_sign_email' => :'suppressInsuredESignEmail',
+        :'has_documents_to_upload' => :'hasDocumentsToUpload',
+        :'send_email_to_retail_agent' => :'sendEmailToRetailAgent',
+        :'send_welcome_letter_email_to_insured' => :'sendWelcomeLetterEmailToInsured'
       }
     end
 

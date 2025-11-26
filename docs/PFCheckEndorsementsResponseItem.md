@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **agreement_id** | **Float** |  | [optional] |
-| **client_id** | **Float** |  | [optional] |
+| **agreement_id** | **Integer** |  | [optional] |
+| **client_id** | **Integer** |  | [optional] |
 | **account_number** | **String** |  | [optional] |
 | **client_name** | **String** |  | [optional] |
 | **is_commercial** | **Boolean** |  | [optional] |

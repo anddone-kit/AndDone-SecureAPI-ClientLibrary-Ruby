@@ -105,7 +105,7 @@ module OpenapiClient
         :'create_account_token' => :'createAccountToken',
         :'commission_type' => :'commissionType',
         :'commission_value' => :'commissionValue',
-        :'commission_fixed_value' => :'CommissionFixedValue'
+        :'commission_fixed_value' => :'commissionFixedValue'
       }
     end
 

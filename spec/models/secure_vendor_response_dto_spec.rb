@@ -42,7 +42,7 @@ describe OpenapiClient::SecureVendorResponseDTO do
   describe 'test attribute "legal_entity_type"' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
-      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["NA", "Corporation", "LimitedLiabilityCompany", "LimitedLiabilityPartnership", "LimitedPartnership", "Partnership"])
+      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["NA", "Corporation", "LimitedLiabilityCompany", "LimitedLiabilityPartnership", "LimitedPartnership", "Partnership", "Individual"])
       # validator.allowable_values.each do |value|
       #   expect { instance.legal_entity_type = value }.not_to raise_error
       # end
@@ -76,7 +76,7 @@ describe OpenapiClient::SecureVendorResponseDTO do
   describe 'test attribute "payment_method_type"' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
-      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["Checks"])
+      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["Check"])
       # validator.allowable_values.each do |value|
       #   expect { instance.payment_method_type = value }.not_to raise_error
       # end
@@ -132,6 +132,40 @@ describe OpenapiClient::SecureVendorResponseDTO do
   end
 
   describe 'test attribute "physical_address"' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  describe 'test attribute "vendor_status"' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["NA", "Reviewing", "Approved", "Denied", "Suspend", "Deleted"])
+      # validator.allowable_values.each do |value|
+      #   expect { instance.vendor_status = value }.not_to raise_error
+      # end
+    end
+  end
+
+  describe 'test attribute "created_by"' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  describe 'test attribute "modified_by"' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  describe 'test attribute "created_on"' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  describe 'test attribute "modified_on"' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end

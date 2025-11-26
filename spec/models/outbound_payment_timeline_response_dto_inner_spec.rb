@@ -40,7 +40,7 @@ describe OpenapiClient::OutboundPaymentTimelineResponseDTOInner do
   describe 'test attribute "payment_method_status"' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
-      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["NA", "Processing", "Printed", "Mailed", "Pdf", "Returned", "Canceled"])
+      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["NA", "Accepted", "PrintQueued", "Printed", "Mailed", "Delivered", "Pdf", "Cancelled", "Warning", "Failed", "Returned", "Transit"])
       # validator.allowable_values.each do |value|
       #   expect { instance.payment_method_status = value }.not_to raise_error
       # end

@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **payment_types** | **Array&lt;String&gt;** |  | [optional] |
+| **payment_types** | **Array&lt;String&gt;** |  |  |
 
 ## Example
 

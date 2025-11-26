@@ -19,11 +19,14 @@ module OpenapiClient
 
     attr_accessor :type
 
+    attr_accessor :is_aggregate_amount
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'name' => :'name',
-        :'type' => :'type'
+        :'type' => :'type',
+        :'is_aggregate_amount' => :'isAggregateAmount'
       }
     end
 
@@ -36,7 +39,8 @@ module OpenapiClient
     def self.openapi_types
       {
         :'name' => :'String',
-        :'type' => :'String'
+        :'type' => :'String',
+        :'is_aggregate_amount' => :'Boolean'
       }
     end
 
@@ -68,6 +72,10 @@ module OpenapiClient
       if attributes.key?(:'type')
         self.type = attributes[:'type']
       end
+
+      if attributes.key?(:'is_aggregate_amount')
+        self.is_aggregate_amount = attributes[:'is_aggregate_amount']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -91,7 +99,8 @@ module OpenapiClient
       return true if self.equal?(o)
       self.class == o.class &&
           name == o.name &&
-          type == o.type
+          type == o.type &&
+          is_aggregate_amount == o.is_aggregate_amount
     end
 
     # @see the `==` method
@@ -103,7 +112,7 @@ module OpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [name, type].hash
+      [name, type, is_aggregate_amount].hash
     end
 
     # Builds the object from hash

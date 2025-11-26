@@ -27,6 +27,22 @@ describe OpenapiClient::SecureUpdatePaymentLinkRequestSettings do
     end
   end
 
+  describe 'test attribute "selected_customer_fields"' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  describe 'test attribute "additional_details_preference"' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["None", "AskShopper", "ManualEnter", "NoAdditionalDetails", "ManualEnterEditNotAllowed"])
+      # validator.allowable_values.each do |value|
+      #   expect { instance.additional_details_preference = value }.not_to raise_error
+      # end
+    end
+  end
+
   describe 'test attribute "display_summary"' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
@@ -69,13 +85,9 @@ describe OpenapiClient::SecureUpdatePaymentLinkRequestSettings do
     end
   end
 
-  describe 'test attribute "additional_details_preference"' do
+  describe 'test attribute "intent"' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
-      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["AskShopper", "ManualEnter", "NoAdditionalDetails"])
-      # validator.allowable_values.each do |value|
-      #   expect { instance.additional_details_preference = value }.not_to raise_error
-      # end
     end
   end
 

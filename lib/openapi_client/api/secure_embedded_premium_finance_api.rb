@@ -90,7 +90,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'PFPolicyUpdateResponse'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecureEmbeddedPremiumFinanceApi.secure_epf_merchants_quotes_policy_put",
@@ -184,7 +184,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'PFUpdatePFAResponse'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecureEmbeddedPremiumFinanceApi.secure_epf_quotes_booking_put",
@@ -272,7 +272,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type]
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecureEmbeddedPremiumFinanceApi.secure_epf_quotes_captureesign_put",
@@ -362,7 +362,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'Array<PFGenerateQuoteResponse>'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecureEmbeddedPremiumFinanceApi.secure_epf_quotes_generate_post",
@@ -542,7 +542,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'QuoteResponse'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecureEmbeddedPremiumFinanceApi.secure_epf_quotes_post",
@@ -632,7 +632,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'String'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecureEmbeddedPremiumFinanceApi.secure_epf_retrievepfa_post",

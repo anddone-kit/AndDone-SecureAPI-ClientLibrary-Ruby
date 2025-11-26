@@ -6,7 +6,7 @@
 | ---- | ---- | ----------- | ----- |
 | **best_number** | **String** |  | [optional] |
 | **unique_id** | **String** |  | [optional] |
-| **name** | **String** |  |  |
+| **name** | **String** |  | [optional] |
 | **care_of** | **String** |  | [optional] |
 | **address1** | **String** |  | [optional] |
 | **address2** | **String** |  | [optional] |

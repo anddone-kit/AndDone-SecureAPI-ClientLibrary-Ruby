@@ -7,10 +7,10 @@
 | **merchant_id** | **String** |  |  |
 | **title** | **String** |  |  |
 | **amount** | **Float** |  |  |
-| **payment_description** | **String** |  | [optional] |
+| **payment_description** | **String** |  |  |
 | **customers** | [**Array&lt;PaymentLinkResponseCustomersInner&gt;**](PaymentLinkResponseCustomersInner.md) |  | [optional] |
 | **invoice_number** | **String** |  | [optional] |
-| **expire_by** | **Float** |  | [optional] |
+| **expire_by** | **Integer** |  | [optional] |
 | **expire_in** | **Integer** |  |  |
 | **expire_in_unit** | **String** |  |  |
 | **expire_on** | **String** |  | [optional] |
@@ -27,7 +27,7 @@
 | **reference_type** | **String** |  | [optional] |
 | **reference_number** | **String** |  | [optional] |
 | **reference_key** | **String** |  | [optional] |
-| **reference_data_list** | [**Array&lt;PaymentLinkResponseReferenceDataListInner&gt;**](PaymentLinkResponseReferenceDataListInner.md) |  |  |
+| **reference_data_list** | [**Array&lt;PaymentLinkRequestReferenceDataListInner&gt;**](PaymentLinkRequestReferenceDataListInner.md) |  |  |
 | **enable_premium_finance** | **Boolean** |  | [optional] |
 | **suppress_technology_fee** | **Boolean** |  | [optional] |
 | **override_technology_fee** | **Float** |  | [optional] |

@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **quote_key** | **Integer** | This denotes the quoteKey. |  |
+| **quote_key** | **Float** | This denotes the quoteKey. |  |
 
 ## Example
 

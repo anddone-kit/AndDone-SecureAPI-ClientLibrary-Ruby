@@ -6,6 +6,8 @@
 Gemfile
 README.md
 Rakefile
+docs/AutoPayEnrollmentRequest.md
+docs/AutoPayEnrollmentResponse.md
 docs/BankDetailDto.md
 docs/CancelPaymentRequestDTO.md
 docs/DataDto.md
@@ -14,6 +16,7 @@ docs/GetQuoteRequest.md
 docs/HeadingDto.md
 docs/MerchantTransactionEntityResponse.md
 docs/MerchantTransactionEntityResponseDataInner.md
+docs/OutboundPaymentImageResponseDTO.md
 docs/OutboundPaymentTimelineResponseDTOInner.md
 docs/PFCheckEndorsementsRequest.md
 docs/PFCheckEndorsementsResponse.md
@@ -21,8 +24,6 @@ docs/PFCheckEndorsementsResponseItem.md
 docs/PFCheckEndorsementsResponseItemPoliciesInner.md
 docs/PFEndorsementRequest.md
 docs/PFEndorsementRequestQuote.md
-docs/PFEndorsementRequestQuoteAgent.md
-docs/PFEndorsementRequestQuoteAgentAddress.md
 docs/PFEndorsementRequestQuoteCommunication.md
 docs/PFEndorsementRequestQuoteDetails.md
 docs/PFEndorsementRequestQuoteDetailsRecurringACH.md
@@ -56,6 +57,8 @@ docs/PFLiteQuoteByPaymentLinkResponse.md
 docs/PFLiteQuoteByPaymentLinkResponsePoliciesInner.md
 docs/PFLiteQuoteByPaymentLinkResponsePoliciesInnerCarrier.md
 docs/PFLiteSecureQuoteRequest.md
+docs/PFLiteSecureQuoteRequestAgent.md
+docs/PFLiteSecureQuoteRequestAgentAddress.md
 docs/PFLiteSecureQuoteRequestInsured.md
 docs/PFLiteSecureQuoteRequestInsuredAddress.md
 docs/PFLiteSecureQuoteRequestMerchant.md
@@ -90,8 +93,10 @@ docs/PaymentIntentRequestReferenceDataListInner.md
 docs/PaymentIntentRequestSplitsInner.md
 docs/PaymentIntentResponse.md
 docs/PaymentIntentResponseCustomersInner.md
+docs/PaymentIntentResponseIntent.md
 docs/PaymentLinkExpiresResponse.md
 docs/PaymentLinkRequest.md
+docs/PaymentLinkRequestReferenceDataListInner.md
 docs/PaymentLinkRequestSettings.md
 docs/PaymentLinkRequestSettingsIntent.md
 docs/PaymentLinkResponse.md
@@ -114,7 +119,6 @@ docs/PaymentResponseDto.md
 docs/PaymentTimeLineRequestDto.md
 docs/QuoteRequest.md
 docs/QuoteRequestAgent.md
-docs/QuoteRequestAgentAddress.md
 docs/QuoteRequestDetails.md
 docs/QuoteRequestInsured.md
 docs/QuoteRequestInsuredAddress.md
@@ -127,13 +131,14 @@ docs/RefundEligibility.md
 docs/RemittanceDataDto.md
 docs/ReportDownloadRequest.md
 docs/RowDto.md
+docs/SecureAutopayEnrollmentApi.md
 docs/SecureBatchExecuteRequest.md
 docs/SecureCancelledTransactionResponse.md
 docs/SecureEmbeddedPremiumFinanceApi.md
 docs/SecureEmbeddedPremiumFinanceEndorsementsApi.md
 docs/SecureMerchantTokenShortResponse.md
-docs/SecureOrumApi.md
 docs/SecureOutboundPaymentsApi.md
+docs/SecurePFQuoteBookingRequest.md
 docs/SecurePaymentBatchDetailsRequest.md
 docs/SecurePaymentBatchingApi.md
 docs/SecurePaymentDetailsRequest.md
@@ -175,7 +180,6 @@ docs/TokenLinkResponse.md
 docs/TokenLinkResponseDataInner.md
 docs/TokenLinkSecureRequest.md
 docs/TokenLinkSecureRequestCustomersInner.md
-docs/TokenLinkSecureRequestIntent.md
 docs/TokenRequest.md
 docs/TransactionDetailResponse.md
 docs/TransactionDetailResponseSplitsInner.md
@@ -202,16 +206,11 @@ docs/VendorResponseDTORemittanceAddress.md
 docs/VendorResponseDTOTemplate.md
 docs/VendorResponseDTOVerificationResultsInner.md
 docs/VendorTimelineResponseListInner.md
-docs/VerificationEntityRequest.md
-docs/VerifyBankAccountRequest.md
-docs/VerifyBankAccountRequestBankAccountEntity.md
-docs/VerifyBankAccountResponse.md
-docs/VerifyBankAccountResponseHttpResponse.md
 git_push.sh
 lib/openapi_client.rb
+lib/openapi_client/api/secure_autopay_enrollment_api.rb
 lib/openapi_client/api/secure_embedded_premium_finance_api.rb
 lib/openapi_client/api/secure_embedded_premium_finance_endorsements_api.rb
-lib/openapi_client/api/secure_orum_api.rb
 lib/openapi_client/api/secure_outbound_payments_api.rb
 lib/openapi_client/api/secure_payment_batching_api.rb
 lib/openapi_client/api/secure_payment_intent_api.rb
@@ -227,6 +226,8 @@ lib/openapi_client/api/secure_voids_api.rb
 lib/openapi_client/api_client.rb
 lib/openapi_client/api_error.rb
 lib/openapi_client/configuration.rb
+lib/openapi_client/models/auto_pay_enrollment_request.rb
+lib/openapi_client/models/auto_pay_enrollment_response.rb
 lib/openapi_client/models/bank_detail_dto.rb
 lib/openapi_client/models/cancel_payment_request_dto.rb
 lib/openapi_client/models/data_dto.rb
@@ -235,6 +236,7 @@ lib/openapi_client/models/get_quote_request.rb
 lib/openapi_client/models/heading_dto.rb
 lib/openapi_client/models/merchant_transaction_entity_response.rb
 lib/openapi_client/models/merchant_transaction_entity_response_data_inner.rb
+lib/openapi_client/models/outbound_payment_image_response_dto.rb
 lib/openapi_client/models/outbound_payment_timeline_response_dto_inner.rb
 lib/openapi_client/models/page_payment_list_response_dto.rb
 lib/openapi_client/models/page_payment_list_response_dto_data_inner.rb
@@ -256,8 +258,10 @@ lib/openapi_client/models/payment_intent_request_reference_data_list_inner.rb
 lib/openapi_client/models/payment_intent_request_splits_inner.rb
 lib/openapi_client/models/payment_intent_response.rb
 lib/openapi_client/models/payment_intent_response_customers_inner.rb
+lib/openapi_client/models/payment_intent_response_intent.rb
 lib/openapi_client/models/payment_link_expires_response.rb
 lib/openapi_client/models/payment_link_request.rb
+lib/openapi_client/models/payment_link_request_reference_data_list_inner.rb
 lib/openapi_client/models/payment_link_request_settings.rb
 lib/openapi_client/models/payment_link_request_settings_intent.rb
 lib/openapi_client/models/payment_link_response.rb
@@ -284,8 +288,6 @@ lib/openapi_client/models/pf_check_endorsements_response_item.rb
 lib/openapi_client/models/pf_check_endorsements_response_item_policies_inner.rb
 lib/openapi_client/models/pf_endorsement_request.rb
 lib/openapi_client/models/pf_endorsement_request_quote.rb
-lib/openapi_client/models/pf_endorsement_request_quote_agent.rb
-lib/openapi_client/models/pf_endorsement_request_quote_agent_address.rb
 lib/openapi_client/models/pf_endorsement_request_quote_communication.rb
 lib/openapi_client/models/pf_endorsement_request_quote_details.rb
 lib/openapi_client/models/pf_endorsement_request_quote_details_recurring_ach.rb
@@ -319,6 +321,8 @@ lib/openapi_client/models/pf_lite_quote_by_payment_link_response.rb
 lib/openapi_client/models/pf_lite_quote_by_payment_link_response_policies_inner.rb
 lib/openapi_client/models/pf_lite_quote_by_payment_link_response_policies_inner_carrier.rb
 lib/openapi_client/models/pf_lite_secure_quote_request.rb
+lib/openapi_client/models/pf_lite_secure_quote_request_agent.rb
+lib/openapi_client/models/pf_lite_secure_quote_request_agent_address.rb
 lib/openapi_client/models/pf_lite_secure_quote_request_insured.rb
 lib/openapi_client/models/pf_lite_secure_quote_request_insured_address.rb
 lib/openapi_client/models/pf_lite_secure_quote_request_merchant.rb
@@ -335,7 +339,6 @@ lib/openapi_client/models/pf_update_pfa_request_dto.rb
 lib/openapi_client/models/pf_update_pfa_response.rb
 lib/openapi_client/models/quote_request.rb
 lib/openapi_client/models/quote_request_agent.rb
-lib/openapi_client/models/quote_request_agent_address.rb
 lib/openapi_client/models/quote_request_details.rb
 lib/openapi_client/models/quote_request_insured.rb
 lib/openapi_client/models/quote_request_insured_address.rb
@@ -354,6 +357,7 @@ lib/openapi_client/models/secure_merchant_token_short_response.rb
 lib/openapi_client/models/secure_payment_batch_details_request.rb
 lib/openapi_client/models/secure_payment_details_request.rb
 lib/openapi_client/models/secure_payment_link_request.rb
+lib/openapi_client/models/secure_pf_quote_booking_request.rb
 lib/openapi_client/models/secure_token_link_by_id_response.rb
 lib/openapi_client/models/secure_token_link_by_id_response_account_token.rb
 lib/openapi_client/models/secure_token_link_by_id_response_time_line_inner.rb
@@ -381,7 +385,6 @@ lib/openapi_client/models/token_link_response.rb
 lib/openapi_client/models/token_link_response_data_inner.rb
 lib/openapi_client/models/token_link_secure_request.rb
 lib/openapi_client/models/token_link_secure_request_customers_inner.rb
-lib/openapi_client/models/token_link_secure_request_intent.rb
 lib/openapi_client/models/token_request.rb
 lib/openapi_client/models/transaction_detail_response.rb
 lib/openapi_client/models/transaction_detail_response_splits_inner.rb
@@ -408,13 +411,14 @@ lib/openapi_client/models/vendor_response_dto_remittance_address.rb
 lib/openapi_client/models/vendor_response_dto_template.rb
 lib/openapi_client/models/vendor_response_dto_verification_results_inner.rb
 lib/openapi_client/models/vendor_timeline_response_list_inner.rb
-lib/openapi_client/models/verification_entity_request.rb
-lib/openapi_client/models/verify_bank_account_request.rb
-lib/openapi_client/models/verify_bank_account_request_bank_account_entity.rb
-lib/openapi_client/models/verify_bank_account_response.rb
-lib/openapi_client/models/verify_bank_account_response_http_response.rb
 lib/openapi_client/version.rb
 openapi_client.gemspec
-spec/models/transaction_payment_response_ach_tender_info_commission_type_spec.rb
-spec/models/transaction_payment_response_refund_origin_spec.rb
+spec/api/secure_autopay_enrollment_api_spec.rb
+spec/models/auto_pay_enrollment_request_spec.rb
+spec/models/auto_pay_enrollment_response_spec.rb
+spec/models/outbound_payment_image_response_dto_spec.rb
+spec/models/payment_intent_response_intent_spec.rb
+spec/models/pf_lite_secure_quote_request_agent_address_spec.rb
+spec/models/pf_lite_secure_quote_request_agent_spec.rb
+spec/models/secure_pf_quote_booking_request_spec.rb
 spec/spec_helper.rb

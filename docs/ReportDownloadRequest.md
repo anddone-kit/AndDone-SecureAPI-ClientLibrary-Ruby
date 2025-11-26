@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **report_id** | **String** |  | [optional] |
+| **report_id** | **String** |  |  |
 | **report_generation_log_id** | **String** |  | [optional] |
 | **file_compress** | **Boolean** |  | [optional] |
 | **date** | **String** |  | [optional] |

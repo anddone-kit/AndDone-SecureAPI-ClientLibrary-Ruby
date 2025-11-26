@@ -94,7 +94,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'PFCheckEndorsementsResponse'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecureEmbeddedPremiumFinanceEndorsementsApi.secure_epf_endorsements_post",
@@ -118,11 +118,11 @@ module OpenapiClient
     # @param x_app_key [String] an authorization header
     # @param x_version [Float] x-version
     # @param origin [String] origin
-    # @param pf_quote_booking_request [PFQuoteBookingRequest] PFQuoteBooking Request details
+    # @param secure_pf_quote_booking_request [SecurePFQuoteBookingRequest] PFQuoteBooking Request details
     # @param [Hash] opts the optional parameters
     # @return [PFUpdatePFAResponse]
-    def secure_epf_quote_endorsement_booking_put(x_api_key, x_app_key, x_version, origin, pf_quote_booking_request, opts = {})
-      data, _status_code, _headers = secure_epf_quote_endorsement_booking_put_with_http_info(x_api_key, x_app_key, x_version, origin, pf_quote_booking_request, opts)
+    def secure_epf_quote_endorsement_booking_put(x_api_key, x_app_key, x_version, origin, secure_pf_quote_booking_request, opts = {})
+      data, _status_code, _headers = secure_epf_quote_endorsement_booking_put_with_http_info(x_api_key, x_app_key, x_version, origin, secure_pf_quote_booking_request, opts)
       data
     end
 
@@ -131,10 +131,10 @@ module OpenapiClient
     # @param x_app_key [String] an authorization header
     # @param x_version [Float] x-version
     # @param origin [String] origin
-    # @param pf_quote_booking_request [PFQuoteBookingRequest] PFQuoteBooking Request details
+    # @param secure_pf_quote_booking_request [SecurePFQuoteBookingRequest] PFQuoteBooking Request details
     # @param [Hash] opts the optional parameters
     # @return [Array<(PFUpdatePFAResponse, Integer, Hash)>] PFUpdatePFAResponse data, response status code and response headers
-    def secure_epf_quote_endorsement_booking_put_with_http_info(x_api_key, x_app_key, x_version, origin, pf_quote_booking_request, opts = {})
+    def secure_epf_quote_endorsement_booking_put_with_http_info(x_api_key, x_app_key, x_version, origin, secure_pf_quote_booking_request, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: SecureEmbeddedPremiumFinanceEndorsementsApi.secure_epf_quote_endorsement_booking_put ...'
       end
@@ -154,9 +154,9 @@ module OpenapiClient
       if @api_client.config.client_side_validation && origin.nil?
         fail ArgumentError, "Missing the required parameter 'origin' when calling SecureEmbeddedPremiumFinanceEndorsementsApi.secure_epf_quote_endorsement_booking_put"
       end
-      # verify the required parameter 'pf_quote_booking_request' is set
-      if @api_client.config.client_side_validation && pf_quote_booking_request.nil?
-        fail ArgumentError, "Missing the required parameter 'pf_quote_booking_request' when calling SecureEmbeddedPremiumFinanceEndorsementsApi.secure_epf_quote_endorsement_booking_put"
+      # verify the required parameter 'secure_pf_quote_booking_request' is set
+      if @api_client.config.client_side_validation && secure_pf_quote_booking_request.nil?
+        fail ArgumentError, "Missing the required parameter 'secure_pf_quote_booking_request' when calling SecureEmbeddedPremiumFinanceEndorsementsApi.secure_epf_quote_endorsement_booking_put"
       end
       # resource path
       local_var_path = '/secure/epf/quote/endorsement/booking'
@@ -182,13 +182,13 @@ module OpenapiClient
       form_params = opts[:form_params] || {}
 
       # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(pf_quote_booking_request)
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(secure_pf_quote_booking_request)
 
       # return_type
       return_type = opts[:debug_return_type] || 'PFUpdatePFAResponse'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecureEmbeddedPremiumFinanceEndorsementsApi.secure_epf_quote_endorsement_booking_put",
@@ -282,7 +282,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'PFEndorsementResponse'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecureEmbeddedPremiumFinanceEndorsementsApi.secure_epf_quote_endorsement_post",

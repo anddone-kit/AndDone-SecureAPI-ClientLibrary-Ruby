@@ -48,6 +48,9 @@ module OpenapiClient
     # The number of installments.
     attr_accessor :installments
 
+    # The offerAutoPay status.
+    attr_accessor :offer_auto_pay
+
     # The batch ID.
     attr_accessor :batch_id
 
@@ -88,6 +91,7 @@ module OpenapiClient
         :'first_due_date' => :'firstDueDate',
         :'apr' => :'apr',
         :'installments' => :'installments',
+        :'offer_auto_pay' => :'offerAutoPay',
         :'batch_id' => :'batchId',
         :'payments_retained' => :'paymentsRetained',
         :'payment_retained_amount' => :'paymentRetainedAmount',
@@ -108,7 +112,7 @@ module OpenapiClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'quote_key' => :'Float',
+        :'quote_key' => :'Integer',
         :'premium' => :'Float',
         :'down_amount' => :'Float',
         :'amount_financed' => :'Float',
@@ -119,8 +123,9 @@ module OpenapiClient
         :'first_due_date' => :'String',
         :'apr' => :'Float',
         :'installments' => :'Integer',
+        :'offer_auto_pay' => :'Boolean',
         :'batch_id' => :'String',
-        :'payments_retained' => :'Float',
+        :'payments_retained' => :'Integer',
         :'payment_retained_amount' => :'Float',
         :'unsigned_pfa_url' => :'String',
         :'retail_agent_register_login_url' => :'String',
@@ -196,6 +201,10 @@ module OpenapiClient
         self.installments = attributes[:'installments']
       end
 
+      if attributes.key?(:'offer_auto_pay')
+        self.offer_auto_pay = attributes[:'offer_auto_pay']
+      end
+
       if attributes.key?(:'batch_id')
         self.batch_id = attributes[:'batch_id']
       end
@@ -264,6 +273,7 @@ module OpenapiClient
           first_due_date == o.first_due_date &&
           apr == o.apr &&
           installments == o.installments &&
+          offer_auto_pay == o.offer_auto_pay &&
           batch_id == o.batch_id &&
           payments_retained == o.payments_retained &&
           payment_retained_amount == o.payment_retained_amount &&
@@ -284,7 +294,7 @@ module OpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [quote_key, premium, down_amount, amount_financed, finance_charge, total_payments, payment_amount, doc_stamp, first_due_date, apr, installments, batch_id, payments_retained, payment_retained_amount, unsigned_pfa_url, retail_agent_register_login_url, e_sign_result, errors, pfa, electronic_signature_url].hash
+      [quote_key, premium, down_amount, amount_financed, finance_charge, total_payments, payment_amount, doc_stamp, first_due_date, apr, installments, offer_auto_pay, batch_id, payments_retained, payment_retained_amount, unsigned_pfa_url, retail_agent_register_login_url, e_sign_result, errors, pfa, electronic_signature_url].hash
     end
 
     # Builds the object from hash

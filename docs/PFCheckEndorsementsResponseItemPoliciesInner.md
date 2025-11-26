@@ -4,13 +4,13 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **policy_id** | **Float** |  | [optional] |
+| **policy_id** | **Integer** |  | [optional] |
 | **company_name** | **String** |  | [optional] |
 | **policy_number** | **String** |  | [optional] |
 | **premium** | **Float** |  | [optional] |
 | **coverage_type** | **String** |  | [optional] |
 | **coverage_type_description** | **String** |  | [optional] |
-| **company_type_id** | **Float** |  | [optional] |
+| **company_type_id** | **Integer** |  | [optional] |
 
 ## Example
 

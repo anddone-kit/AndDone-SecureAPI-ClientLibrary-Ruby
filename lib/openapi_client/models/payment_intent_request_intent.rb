@@ -83,6 +83,8 @@ module OpenapiClient
         if (value = attributes[:'payment_types']).is_a?(Array)
           self.payment_types = value
         end
+      else
+        self.payment_types = nil
       end
     end
 
@@ -91,6 +93,10 @@ module OpenapiClient
     def list_invalid_properties
       warn '[DEPRECATED] the `list_invalid_properties` method is obsolete'
       invalid_properties = Array.new
+      if @payment_types.nil?
+        invalid_properties.push('invalid value for "payment_types", payment_types cannot be nil.')
+      end
+
       invalid_properties
     end
 
@@ -98,6 +104,7 @@ module OpenapiClient
     # @return true if the model is valid
     def valid?
       warn '[DEPRECATED] the `valid?` method is obsolete'
+      return false if @payment_types.nil?
       true
     end
 

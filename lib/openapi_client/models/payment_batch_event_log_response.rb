@@ -76,7 +76,7 @@ module OpenapiClient
         :'merchant_id' => :'String',
         :'previous_event_status' => :'String',
         :'event_status' => :'String',
-        :'voided_count' => :'Float',
+        :'voided_count' => :'Integer',
         :'voided_amount' => :'Float',
         :'closed_on' => :'String',
         :'event_date' => :'String',

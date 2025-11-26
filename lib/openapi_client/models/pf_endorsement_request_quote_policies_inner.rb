@@ -100,7 +100,7 @@ module OpenapiClient
         :'expiration_date' => :'expirationDate',
         :'term' => :'term',
         :'minimum_earned' => :'minimumEarned',
-        :'minimum_earned_percent' => :'MinimumEarnedPercent',
+        :'minimum_earned_percent' => :'minimumEarnedPercent',
         :'auditable' => :'auditable',
         :'cancel_days' => :'cancelDays',
         :'loss_payee_requested' => :'lossPayeeRequested',
@@ -120,7 +120,7 @@ module OpenapiClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'policy_id' => :'String',
+        :'policy_id' => :'Integer',
         :'premium' => :'Float',
         :'down' => :'Float',
         :'down_percent' => :'Float',

@@ -7,6 +7,7 @@ All URIs are relative to *https://api.uat.anddone.com*
 | [**vendorapi_secure_outbound_payments_timelines_post**](SecureOutboundPaymentsApi.md#vendorapi_secure_outbound_payments_timelines_post) | **POST** /vendorapi/secure/outboundPayments/timelines | This API gets outbound payment timelines |
 | [**vendorapi_secure_outboundpayments_cancel_post**](SecureOutboundPaymentsApi.md#vendorapi_secure_outboundpayments_cancel_post) | **POST** /vendorapi/secure/outboundpayments/cancel | This API cancel outbound payment request |
 | [**vendorapi_secure_outboundpayments_detail_post**](SecureOutboundPaymentsApi.md#vendorapi_secure_outboundpayments_detail_post) | **POST** /vendorapi/secure/outboundpayments/detail | This API fetch outbound payment by paymentId |
+| [**vendorapi_secure_outboundpayments_image_post**](SecureOutboundPaymentsApi.md#vendorapi_secure_outboundpayments_image_post) | **POST** /vendorapi/secure/outboundpayments/image | This API gets outbound payment JPG image in Base64 string format |
 | [**vendorapi_secure_outboundpayments_post**](SecureOutboundPaymentsApi.md#vendorapi_secure_outboundpayments_post) | **POST** /vendorapi/secure/outboundpayments | This API creates outbound payment request |
 | [**vendorapi_secure_outboundpayments_search_post**](SecureOutboundPaymentsApi.md#vendorapi_secure_outboundpayments_search_post) | **POST** /vendorapi/secure/outboundpayments/search | This API gets all outbound payment |
 
@@ -22,18 +23,6 @@ This API gets outbound payment timelines
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecureOutboundPaymentsApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -85,7 +74,7 @@ end
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -104,18 +93,6 @@ This API cancel outbound payment request
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecureOutboundPaymentsApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -166,7 +143,7 @@ nil (empty response body)
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -185,18 +162,6 @@ This API fetch outbound payment by paymentId
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecureOutboundPaymentsApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -248,7 +213,77 @@ end
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## vendorapi_secure_outboundpayments_image_post
+
+> <OutboundPaymentImageResponseDTO> vendorapi_secure_outboundpayments_image_post(x_api_key, x_app_key, x_version, origin, payment_time_line_request_dto)
+
+This API gets outbound payment JPG image in Base64 string format
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::SecureOutboundPaymentsApi.new
+x_api_key = 'x_api_key_example' # String | an authorization header
+x_app_key = 'x_app_key_example' # String | an authorization header
+x_version = 8.14 # Float | x-version
+origin = 'origin_example' # String | origin
+payment_time_line_request_dto = OpenapiClient::PaymentTimeLineRequestDto.new({payment_id: 'payment_id_example'}) # PaymentTimeLineRequestDto | OutboundPaymentImageRequestDto
+
+begin
+  # This API gets outbound payment JPG image in Base64 string format
+  result = api_instance.vendorapi_secure_outboundpayments_image_post(x_api_key, x_app_key, x_version, origin, payment_time_line_request_dto)
+  p result
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SecureOutboundPaymentsApi->vendorapi_secure_outboundpayments_image_post: #{e}"
+end
+```
+
+#### Using the vendorapi_secure_outboundpayments_image_post_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<OutboundPaymentImageResponseDTO>, Integer, Hash)> vendorapi_secure_outboundpayments_image_post_with_http_info(x_api_key, x_app_key, x_version, origin, payment_time_line_request_dto)
+
+```ruby
+begin
+  # This API gets outbound payment JPG image in Base64 string format
+  data, status_code, headers = api_instance.vendorapi_secure_outboundpayments_image_post_with_http_info(x_api_key, x_app_key, x_version, origin, payment_time_line_request_dto)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <OutboundPaymentImageResponseDTO>
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SecureOutboundPaymentsApi->vendorapi_secure_outboundpayments_image_post_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **x_api_key** | **String** | an authorization header |  |
+| **x_app_key** | **String** | an authorization header |  |
+| **x_version** | **Float** | x-version |  |
+| **origin** | **String** | origin |  |
+| **payment_time_line_request_dto** | [**PaymentTimeLineRequestDto**](PaymentTimeLineRequestDto.md) | OutboundPaymentImageRequestDto |  |
+
+### Return type
+
+[**OutboundPaymentImageResponseDTO**](OutboundPaymentImageResponseDTO.md)
+
+### Authorization
+
+No authorization required
 
 ### HTTP request headers
 
@@ -267,18 +302,6 @@ This API creates outbound payment request
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecureOutboundPaymentsApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -330,7 +353,7 @@ end
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -349,18 +372,6 @@ This API gets all outbound payment
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecureOutboundPaymentsApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -380,7 +391,10 @@ opts = {
   start_date: 'start_date_example', # String | sets startDate
   end_date: 'end_date_example', # String | sets endDate
   search_text: 'search_text_example', # String | sets searchText
-  sort_field: 'sort_field_example' # String | sets sortField
+  start_row: 56, # Integer | sets startRow
+  page_size: 56, # Integer | sets pageSize
+  sort_field: 'sort_field_example', # String | sets sortField
+  asc: true # Boolean | Set Asc
 }
 
 begin
@@ -430,7 +444,10 @@ end
 | **start_date** | **String** | sets startDate | [optional] |
 | **end_date** | **String** | sets endDate | [optional] |
 | **search_text** | **String** | sets searchText | [optional] |
+| **start_row** | **Integer** | sets startRow | [optional] |
+| **page_size** | **Integer** | sets pageSize | [optional] |
 | **sort_field** | **String** | sets sortField | [optional] |
+| **asc** | **Boolean** | Set Asc | [optional] |
 
 ### Return type
 
@@ -438,7 +455,7 @@ end
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 

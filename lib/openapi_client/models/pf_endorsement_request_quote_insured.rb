@@ -91,27 +91,27 @@ module OpenapiClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'agent_customer_number' => :'AgentCustomerNumber',
-        :'email' => :'Email',
-        :'care_of' => :'CareOf',
-        :'unique_id' => :'UniqueID',
-        :'mobile_phone_number' => :'MobilePhoneNumber',
-        :'is_cancellation_warning_enabled' => :'IsCancellationWarningEnabled',
-        :'fax_number' => :'FaxNumber',
-        :'email_address' => :'EmailAddress',
-        :'pf_type' => :'PFType',
-        :'address' => :'Address',
-        :'has_data_change_agent_customer_number' => :'HasDataChangeAgentCustomerNumber',
-        :'has_data_change_name' => :'HasDataChangeName',
-        :'has_data_change_address1' => :'HasDataChangeAddress1',
-        :'has_data_change_address2' => :'HasDataChangeAddress2',
-        :'has_data_change_city' => :'HasDataChangeCity',
-        :'has_data_change_state' => :'HasDataChangeState',
-        :'has_data_change_zip' => :'HasDataChangeZip',
-        :'has_data_change_phone' => :'HasDataChangePhone',
-        :'has_data_change_email' => :'HasDataChangeEmail',
-        :'has_data_change_care_of' => :'HasDataChangeCareOf',
-        :'has_data_change_insured' => :'HasDataChangeInsured'
+        :'agent_customer_number' => :'agentCustomerNumber',
+        :'email' => :'email',
+        :'care_of' => :'careOf',
+        :'unique_id' => :'uniqueID',
+        :'mobile_phone_number' => :'mobilePhoneNumber',
+        :'is_cancellation_warning_enabled' => :'isCancellationWarningEnabled',
+        :'fax_number' => :'faxNumber',
+        :'email_address' => :'emailAddress',
+        :'pf_type' => :'pfType',
+        :'address' => :'address',
+        :'has_data_change_agent_customer_number' => :'hasDataChangeAgentCustomerNumber',
+        :'has_data_change_name' => :'hasDataChangeName',
+        :'has_data_change_address1' => :'hasDataChangeAddress1',
+        :'has_data_change_address2' => :'hasDataChangeAddress2',
+        :'has_data_change_city' => :'hasDataChangeCity',
+        :'has_data_change_state' => :'hasDataChangeState',
+        :'has_data_change_zip' => :'hasDataChangeZip',
+        :'has_data_change_phone' => :'hasDataChangePhone',
+        :'has_data_change_email' => :'hasDataChangeEmail',
+        :'has_data_change_care_of' => :'hasDataChangeCareOf',
+        :'has_data_change_insured' => :'hasDataChangeInsured'
       }
     end
 

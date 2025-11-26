@@ -88,7 +88,7 @@ describe OpenapiClient::VendorResponseDTORemittanceAddress do
   describe 'test attribute "address_source"' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
-      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["NA"])
+      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["NA", "Manual", "Smarty_lookup"])
       # validator.allowable_values.each do |value|
       #   expect { instance.address_source = value }.not_to raise_error
       # end

@@ -92,7 +92,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type]
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecureTokenManagementApi.secure_tokens_activations_delete",
@@ -186,7 +186,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'SecureMerchantTokenShortResponse'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecureTokenManagementApi.secure_tokens_details_post",

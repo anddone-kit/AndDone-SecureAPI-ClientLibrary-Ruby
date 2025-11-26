@@ -80,7 +80,7 @@ module OpenapiClient
         :'expire_in' => :'Integer',
         :'expire_in_unit' => :'String',
         :'response_type' => :'String',
-        :'intent' => :'TokenLinkSecureRequestIntent',
+        :'intent' => :'PaymentIntentRequestIntent',
         :'callback_parameters' => :'PaymentLinkResponseCallbackParameters',
         :'customers' => :'Array<TokenLinkSecureRequestCustomersInner>'
       }

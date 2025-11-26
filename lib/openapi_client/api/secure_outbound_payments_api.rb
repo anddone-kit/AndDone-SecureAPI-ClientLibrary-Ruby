@@ -94,7 +94,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'Array<OutboundPaymentTimelineResponseDTOInner>'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecureOutboundPaymentsApi.vendorapi_secure_outbound_payments_timelines_post",
@@ -186,7 +186,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type]
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecureOutboundPaymentsApi.vendorapi_secure_outboundpayments_cancel_post",
@@ -280,7 +280,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'PaymentDetailResponseDTO'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecureOutboundPaymentsApi.vendorapi_secure_outboundpayments_detail_post",
@@ -295,6 +295,100 @@ module OpenapiClient
       data, status_code, headers = @api_client.call_api(:POST, local_var_path, new_options)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: SecureOutboundPaymentsApi#vendorapi_secure_outboundpayments_detail_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # This API gets outbound payment JPG image in Base64 string format
+    # @param x_api_key [String] an authorization header
+    # @param x_app_key [String] an authorization header
+    # @param x_version [Float] x-version
+    # @param origin [String] origin
+    # @param payment_time_line_request_dto [PaymentTimeLineRequestDto] OutboundPaymentImageRequestDto
+    # @param [Hash] opts the optional parameters
+    # @return [OutboundPaymentImageResponseDTO]
+    def vendorapi_secure_outboundpayments_image_post(x_api_key, x_app_key, x_version, origin, payment_time_line_request_dto, opts = {})
+      data, _status_code, _headers = vendorapi_secure_outboundpayments_image_post_with_http_info(x_api_key, x_app_key, x_version, origin, payment_time_line_request_dto, opts)
+      data
+    end
+
+    # This API gets outbound payment JPG image in Base64 string format
+    # @param x_api_key [String] an authorization header
+    # @param x_app_key [String] an authorization header
+    # @param x_version [Float] x-version
+    # @param origin [String] origin
+    # @param payment_time_line_request_dto [PaymentTimeLineRequestDto] OutboundPaymentImageRequestDto
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(OutboundPaymentImageResponseDTO, Integer, Hash)>] OutboundPaymentImageResponseDTO data, response status code and response headers
+    def vendorapi_secure_outboundpayments_image_post_with_http_info(x_api_key, x_app_key, x_version, origin, payment_time_line_request_dto, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: SecureOutboundPaymentsApi.vendorapi_secure_outboundpayments_image_post ...'
+      end
+      # verify the required parameter 'x_api_key' is set
+      if @api_client.config.client_side_validation && x_api_key.nil?
+        fail ArgumentError, "Missing the required parameter 'x_api_key' when calling SecureOutboundPaymentsApi.vendorapi_secure_outboundpayments_image_post"
+      end
+      # verify the required parameter 'x_app_key' is set
+      if @api_client.config.client_side_validation && x_app_key.nil?
+        fail ArgumentError, "Missing the required parameter 'x_app_key' when calling SecureOutboundPaymentsApi.vendorapi_secure_outboundpayments_image_post"
+      end
+      # verify the required parameter 'x_version' is set
+      if @api_client.config.client_side_validation && x_version.nil?
+        fail ArgumentError, "Missing the required parameter 'x_version' when calling SecureOutboundPaymentsApi.vendorapi_secure_outboundpayments_image_post"
+      end
+      # verify the required parameter 'origin' is set
+      if @api_client.config.client_side_validation && origin.nil?
+        fail ArgumentError, "Missing the required parameter 'origin' when calling SecureOutboundPaymentsApi.vendorapi_secure_outboundpayments_image_post"
+      end
+      # verify the required parameter 'payment_time_line_request_dto' is set
+      if @api_client.config.client_side_validation && payment_time_line_request_dto.nil?
+        fail ArgumentError, "Missing the required parameter 'payment_time_line_request_dto' when calling SecureOutboundPaymentsApi.vendorapi_secure_outboundpayments_image_post"
+      end
+      # resource path
+      local_var_path = '/vendorapi/secure/outboundpayments/image'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json']) unless header_params['Accept']
+      # HTTP header 'Content-Type'
+      content_type = @api_client.select_header_content_type(['application/json'])
+      if !content_type.nil?
+          header_params['Content-Type'] = content_type
+      end
+      header_params[:'x-api-key'] = x_api_key
+      header_params[:'x-app-key'] = x_app_key
+      header_params[:'x-version'] = x_version
+      header_params[:'origin'] = origin
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(payment_time_line_request_dto)
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'OutboundPaymentImageResponseDTO'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"SecureOutboundPaymentsApi.vendorapi_secure_outboundpayments_image_post",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: SecureOutboundPaymentsApi#vendorapi_secure_outboundpayments_image_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -374,7 +468,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'PaymentResponseDto'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecureOutboundPaymentsApi.vendorapi_secure_outboundpayments_post",
@@ -411,7 +505,10 @@ module OpenapiClient
     # @option opts [String] :start_date sets startDate
     # @option opts [String] :end_date sets endDate
     # @option opts [String] :search_text sets searchText
+    # @option opts [Integer] :start_row sets startRow
+    # @option opts [Integer] :page_size sets pageSize
     # @option opts [String] :sort_field sets sortField
+    # @option opts [Boolean] :asc Set Asc
     # @return [PagePaymentListResponseDTO]
     def vendorapi_secure_outboundpayments_search_post(x_api_key, x_app_key, x_version, origin, opts = {})
       data, _status_code, _headers = vendorapi_secure_outboundpayments_search_post_with_http_info(x_api_key, x_app_key, x_version, origin, opts)
@@ -436,7 +533,10 @@ module OpenapiClient
     # @option opts [String] :start_date sets startDate
     # @option opts [String] :end_date sets endDate
     # @option opts [String] :search_text sets searchText
+    # @option opts [Integer] :start_row sets startRow
+    # @option opts [Integer] :page_size sets pageSize
     # @option opts [String] :sort_field sets sortField
+    # @option opts [Boolean] :asc Set Asc
     # @return [Array<(PagePaymentListResponseDTO, Integer, Hash)>] PagePaymentListResponseDTO data, response status code and response headers
     def vendorapi_secure_outboundpayments_search_post_with_http_info(x_api_key, x_app_key, x_version, origin, opts = {})
       if @api_client.config.debugging
@@ -479,7 +579,10 @@ module OpenapiClient
       query_params[:'startDate'] = opts[:'start_date'] if !opts[:'start_date'].nil?
       query_params[:'endDate'] = opts[:'end_date'] if !opts[:'end_date'].nil?
       query_params[:'searchText'] = opts[:'search_text'] if !opts[:'search_text'].nil?
+      query_params[:'startRow'] = opts[:'start_row'] if !opts[:'start_row'].nil?
+      query_params[:'pageSize'] = opts[:'page_size'] if !opts[:'page_size'].nil?
       query_params[:'sortField'] = opts[:'sort_field'] if !opts[:'sort_field'].nil?
+      query_params[:'asc'] = opts[:'asc'] if !opts[:'asc'].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -500,7 +603,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'PagePaymentListResponseDTO'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecureOutboundPaymentsApi.vendorapi_secure_outboundpayments_search_post",

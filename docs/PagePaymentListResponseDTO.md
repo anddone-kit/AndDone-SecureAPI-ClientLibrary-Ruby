@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **total_row_count** | **Float** |  | [optional] |
+| **total_row_count** | **Integer** |  | [optional] |
 | **total_amount** | **Float** |  | [optional] |
 | **data** | [**Array&lt;PagePaymentListResponseDTODataInner&gt;**](PagePaymentListResponseDTODataInner.md) |  | [optional] |
 

@@ -94,7 +94,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'RefundEligibility'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecureRefundsApi.secure_refunds_eligibility_post",
@@ -188,7 +188,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'SecureTransactionDetailDTO'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecureRefundsApi.secure_refunds_post",

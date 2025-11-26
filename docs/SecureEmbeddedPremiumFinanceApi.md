@@ -24,18 +24,6 @@ This API is will update the policy number
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecureEmbeddedPremiumFinanceApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -89,7 +77,7 @@ end
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -108,18 +96,6 @@ This API will update PFA to book a quote.
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecureEmbeddedPremiumFinanceApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -171,7 +147,7 @@ end
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -190,18 +166,6 @@ This API will eSign the pfa with insured name.
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecureEmbeddedPremiumFinanceApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -254,7 +218,7 @@ nil (empty response body)
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -273,18 +237,6 @@ This API is used to Generate Quotes
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecureEmbeddedPremiumFinanceApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -292,7 +244,7 @@ x_app_key = 'x_app_key_example' # String | an authorization header
 x_version = 8.14 # Float | x-version
 origin = 'origin_example' # String | origin
 opts = {
-  quote_request: OpenapiClient::QuoteRequest.new({payment_intent_id: 'payment_intent_id_example', details: OpenapiClient::QuoteRequestDetails.new, insured: OpenapiClient::QuoteRequestInsured.new({email: 'email_example', address: OpenapiClient::QuoteRequestInsuredAddress.new({name: 'name_example', address1: 'address1_example', city: 'city_example', state: 'state_example', zip: 'zip_example'})}), agent: OpenapiClient::QuoteRequestAgent.new, policies: [OpenapiClient::QuoteRequestPoliciesInner.new({premium: 3.56, coverage: 'coverage_example', effective_date: 'effective_date_example', company: OpenapiClient::QuoteRequestPoliciesInnerCompany.new({name: 'name_example', unique_id: 'unique_id_example'})})]}) # QuoteRequest | Quote Request
+  quote_request: OpenapiClient::QuoteRequest.new({payment_intent_id: 'payment_intent_id_example', details: OpenapiClient::QuoteRequestDetails.new, insured: OpenapiClient::QuoteRequestInsured.new({email: 'email_example'}), agent: OpenapiClient::QuoteRequestAgent.new, policies: [OpenapiClient::QuoteRequestPoliciesInner.new({premium: 3.56, coverage: 'coverage_example', effective_date: 'effective_date_example', company: OpenapiClient::QuoteRequestPoliciesInnerCompany.new({name: 'name_example', unique_id: 'unique_id_example'})})]}) # QuoteRequest | Quote Request
 }
 
 begin
@@ -338,7 +290,7 @@ end
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -429,18 +381,6 @@ This API will return quote by QuoteKey.
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecureEmbeddedPremiumFinanceApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -494,7 +434,7 @@ end
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -513,18 +453,6 @@ This API will return PFA for given quoteKey.
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecureEmbeddedPremiumFinanceApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -578,7 +506,7 @@ end
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 

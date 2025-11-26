@@ -30,7 +30,7 @@ describe OpenapiClient::PaymentIntentRequestReferenceDataListInner do
   describe 'test attribute "reference_type"' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
-      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["QuoteNumber", "AccountNumber", "PolicyNumber", "InvoiceNumber", "OtherNumber"])
+      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["None", "QuoteId", "AccountNumber", "PolicyNumber", "InvoiceNumber", "Other"])
       # validator.allowable_values.each do |value|
       #   expect { instance.reference_type = value }.not_to raise_error
       # end

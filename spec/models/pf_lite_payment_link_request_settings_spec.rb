@@ -36,10 +36,52 @@ describe OpenapiClient::PFLitePaymentLinkRequestSettings do
   describe 'test attribute "additional_details_preference"' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
-      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["AskShopper", "ManualEnter", "NoAdditionalDetails"])
+      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["None", "AskShopper", "ManualEnter", "NoAdditionalDetails", "ManualEnterEditNotAllowed"])
       # validator.allowable_values.each do |value|
       #   expect { instance.additional_details_preference = value }.not_to raise_error
       # end
+    end
+  end
+
+  describe 'test attribute "display_summary"' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  describe 'test attribute "accept_customer_info"' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  describe 'test attribute "remove_header"' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  describe 'test attribute "accept_card"' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  describe 'test attribute "accept_bank_account"' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  describe 'test attribute "save_customer"' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  describe 'test attribute "save_customer_account"' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end
   end
 

@@ -92,6 +92,9 @@ module OpenapiClient
     # The batch ID.
     attr_accessor :batch_id
 
+    # The autopayStatus.
+    attr_accessor :autopay_status
+
     # The number of payments retained.
     attr_accessor :payments_retained
 
@@ -121,6 +124,9 @@ module OpenapiClient
 
     # Indicates if the quote is deleted.
     attr_accessor :is_deleted
+
+    # The OfferAutoPay Status.
+    attr_accessor :offer_auto_pay
 
     # The date when the quote was created.
     attr_accessor :created_on
@@ -191,6 +197,7 @@ module OpenapiClient
         :'apr' => :'apr',
         :'installments' => :'installments',
         :'batch_id' => :'batchId',
+        :'autopay_status' => :'autopayStatus',
         :'payments_retained' => :'paymentsRetained',
         :'payment_retained_amount' => :'paymentRetainedAmount',
         :'retail_agent_register_login_url' => :'retailAgentRegisterLoginURL',
@@ -201,6 +208,7 @@ module OpenapiClient
         :'is_down_payment_required' => :'isDownPaymentRequired',
         :'is_esign_required' => :'isEsignRequired',
         :'is_deleted' => :'isDeleted',
+        :'offer_auto_pay' => :'offerAutoPay',
         :'created_on' => :'createdOn',
         :'created_by' => :'createdBy',
         :'modified_on' => :'modifiedOn',
@@ -244,6 +252,7 @@ module OpenapiClient
         :'apr' => :'Float',
         :'installments' => :'Integer',
         :'batch_id' => :'String',
+        :'autopay_status' => :'String',
         :'payments_retained' => :'Integer',
         :'payment_retained_amount' => :'Float',
         :'retail_agent_register_login_url' => :'String',
@@ -254,6 +263,7 @@ module OpenapiClient
         :'is_down_payment_required' => :'Boolean',
         :'is_esign_required' => :'Boolean',
         :'is_deleted' => :'Boolean',
+        :'offer_auto_pay' => :'Boolean',
         :'created_on' => :'String',
         :'created_by' => :'String',
         :'modified_on' => :'String',
@@ -390,6 +400,10 @@ module OpenapiClient
         self.batch_id = attributes[:'batch_id']
       end
 
+      if attributes.key?(:'autopay_status')
+        self.autopay_status = attributes[:'autopay_status']
+      end
+
       if attributes.key?(:'payments_retained')
         self.payments_retained = attributes[:'payments_retained']
       end
@@ -428,6 +442,10 @@ module OpenapiClient
 
       if attributes.key?(:'is_deleted')
         self.is_deleted = attributes[:'is_deleted']
+      end
+
+      if attributes.key?(:'offer_auto_pay')
+        self.offer_auto_pay = attributes[:'offer_auto_pay']
       end
 
       if attributes.key?(:'created_on')
@@ -513,6 +531,7 @@ module OpenapiClient
           apr == o.apr &&
           installments == o.installments &&
           batch_id == o.batch_id &&
+          autopay_status == o.autopay_status &&
           payments_retained == o.payments_retained &&
           payment_retained_amount == o.payment_retained_amount &&
           retail_agent_register_login_url == o.retail_agent_register_login_url &&
@@ -523,6 +542,7 @@ module OpenapiClient
           is_down_payment_required == o.is_down_payment_required &&
           is_esign_required == o.is_esign_required &&
           is_deleted == o.is_deleted &&
+          offer_auto_pay == o.offer_auto_pay &&
           created_on == o.created_on &&
           created_by == o.created_by &&
           modified_on == o.modified_on &&
@@ -540,7 +560,7 @@ module OpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [id, quote_key, p_f_type, is_endorsement, merchant_id, program_id, program_name, payment_intent_id, account_number, quote_status, is_active, premium, tax, additional_fees, broker_fee, down_amount, amount_financed, finance_charge, total_payments, payment_amount, total_amount, doc_stamp, first_due_date, apr, installments, batch_id, payments_retained, payment_retained_amount, retail_agent_register_login_url, insured_name, is_esign_pfa, next_payment_due_date, last_payment_date, is_down_payment_required, is_esign_required, is_deleted, created_on, created_by, modified_on, modified_by, un_sign_pfa, sign_pfa].hash
+      [id, quote_key, p_f_type, is_endorsement, merchant_id, program_id, program_name, payment_intent_id, account_number, quote_status, is_active, premium, tax, additional_fees, broker_fee, down_amount, amount_financed, finance_charge, total_payments, payment_amount, total_amount, doc_stamp, first_due_date, apr, installments, batch_id, autopay_status, payments_retained, payment_retained_amount, retail_agent_register_login_url, insured_name, is_esign_pfa, next_payment_due_date, last_payment_date, is_down_payment_required, is_esign_required, is_deleted, offer_auto_pay, created_on, created_by, modified_on, modified_by, un_sign_pfa, sign_pfa].hash
     end
 
     # Builds the object from hash

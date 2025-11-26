@@ -18,18 +18,6 @@ This API will add system report.
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecureReportsApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -37,7 +25,7 @@ x_app_key = 'x_app_key_example' # String | an authorization header
 x_version = 8.14 # Float | x-version
 origin = 'origin_example' # String | origin
 opts = {
-  report_download_request: OpenapiClient::ReportDownloadRequest.new # ReportDownloadRequest | ReportDownloadRequest
+  report_download_request: OpenapiClient::ReportDownloadRequest.new({report_id: 'report_id_example'}) # ReportDownloadRequest | ReportDownloadRequest
 }
 
 begin
@@ -82,7 +70,7 @@ nil (empty response body)
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 

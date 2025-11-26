@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **quote_key** | **Float** | The key associated with the quote. | [optional] |
+| **quote_key** | **Integer** | The key associated with the quote. | [optional] |
 | **premium** | **Float** | The premium amount. | [optional] |
 | **down_amount** | **Float** | The down payment amount. | [optional] |
 | **amount_financed** | **Float** | The amount financed. | [optional] |
@@ -15,8 +15,9 @@
 | **first_due_date** | **String** | The first due date. | [optional] |
 | **apr** | **Float** | The annual percentage rate (APR). | [optional] |
 | **installments** | **Integer** | The number of installments. | [optional] |
+| **offer_auto_pay** | **Boolean** | The offerAutoPay status. | [optional] |
 | **batch_id** | **String** | The batch ID. | [optional] |
-| **payments_retained** | **Float** | The number of payments retained. | [optional] |
+| **payments_retained** | **Integer** | The number of payments retained. | [optional] |
 | **payment_retained_amount** | **Float** | The amount retained from the payment. | [optional] |
 | **unsigned_pfa_url** | **String** | The URL for the unsigned PFA document. | [optional] |
 | **retail_agent_register_login_url** | **String** | The URL for the retail agent register login. | [optional] |
@@ -42,6 +43,7 @@ instance = OpenapiClient::PFGenerateQuoteResponseItem.new(
   first_due_date: null,
   apr: null,
   installments: null,
+  offer_auto_pay: null,
   batch_id: null,
   payments_retained: null,
   payment_retained_amount: null,

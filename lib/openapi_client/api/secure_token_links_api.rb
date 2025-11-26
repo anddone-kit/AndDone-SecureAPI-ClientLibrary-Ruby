@@ -94,7 +94,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'SecureTokenLinkByIdResponse'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecureTokenLinksApi.secure_tokenlinks_details_post",
@@ -188,7 +188,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'SecureTokenLinkExpiredResponse'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecureTokenLinksApi.secure_tokenlinks_expirations_post",
@@ -227,8 +227,8 @@ module OpenapiClient
     # @option opts [String] :to_expiry_date toExpiryDate
     # @option opts [String] :from_date fromDate
     # @option opts [String] :to_date toDate
-    # @option opts [Float] :start_row Set StartRow
-    # @option opts [Float] :page_size Set PageSize
+    # @option opts [Integer] :start_row Set StartRow
+    # @option opts [Integer] :page_size Set PageSize
     # @option opts [String] :sort_field Set SortField
     # @option opts [Boolean] :asc Set Asc
     # @return [TokenLinkResponse]
@@ -257,8 +257,8 @@ module OpenapiClient
     # @option opts [String] :to_expiry_date toExpiryDate
     # @option opts [String] :from_date fromDate
     # @option opts [String] :to_date toDate
-    # @option opts [Float] :start_row Set StartRow
-    # @option opts [Float] :page_size Set PageSize
+    # @option opts [Integer] :start_row Set StartRow
+    # @option opts [Integer] :page_size Set PageSize
     # @option opts [String] :sort_field Set SortField
     # @option opts [Boolean] :asc Set Asc
     # @return [Array<(TokenLinkResponse, Integer, Hash)>] TokenLinkResponse data, response status code and response headers
@@ -329,7 +329,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'TokenLinkResponse'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecureTokenLinksApi.secure_tokenlinks_list_post",
@@ -423,7 +423,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'SecureTokenLinkResponse'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecureTokenLinksApi.secure_tokenlinks_post",
@@ -515,7 +515,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type]
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecureTokenLinksApi.secure_tokenlinks_put",

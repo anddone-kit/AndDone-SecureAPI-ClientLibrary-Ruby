@@ -25,18 +25,6 @@ This API deletes vendor into system
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecureVendorManagementApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -87,7 +75,7 @@ nil (empty response body)
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -106,18 +94,6 @@ This API gets details of particular vendor
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecureVendorManagementApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -169,7 +145,7 @@ end
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -188,18 +164,6 @@ This API Updates the existing vendor
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecureVendorManagementApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -251,7 +215,7 @@ end
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -270,25 +234,13 @@ This API creates vendor into system
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecureVendorManagementApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
 x_app_key = 'x_app_key_example' # String | an authorization header
 x_version = 8.14 # Float | x-version
 origin = 'origin_example' # String | origin
-vendor_request_dto = OpenapiClient::VendorRequestDTO.new({vendor_name: 'vendor_name_example', vendor_db_name: 'vendor_db_name_example', legal_entity_type: 'NA', payment_method_type: 'Check', notification_type: 'NA', phone_number: 'phone_number_example', email: 'email_example', physical_address: OpenapiClient::VendorRequestDTOPhysicalAddress.new({attention: 'attention_example', address_line1: 'address_line1_example', city: 'city_example', state: 'state_example', country: 'country_example', postal_code: 'postal_code_example', address_source: 'NA'})}) # VendorRequestDTO | VendorRequestDTO
+vendor_request_dto = OpenapiClient::VendorRequestDTO.new({vendor_name: 'vendor_name_example', legal_entity_type: 'NA', payment_method_type: 'Check', notification_type: 'NA', phone_number: 'phone_number_example', email: 'email_example', physical_address: OpenapiClient::VendorRequestDTOPhysicalAddress.new({attention: 'attention_example', address_line1: 'address_line1_example', city: 'city_example', state: 'state_example', country: 'country_example', postal_code: 'postal_code_example', address_source: 'NA'})}) # VendorRequestDTO | VendorRequestDTO
 
 begin
   # This API creates vendor into system
@@ -333,7 +285,7 @@ end
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -352,18 +304,6 @@ This API returns list of all the Vendors of Merchant
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecureVendorManagementApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -379,10 +319,10 @@ opts = {
   created_by: 'created_by_example', # String | Set createdBy
   start_date: 'start_date_example', # String | set start Date
   end_date: 'end_date_example', # String | set end Date
-  page_size: 8.14, # Float | Set PageSize
+  page_size: 56, # Integer | Set PageSize
   search_text: 'search_text_example', # String | search Text
   sort_field: 'sort_field_example', # String | Set SortField
-  start_row: 'start_row_example', # String | Set StartRow
+  start_row: 56, # Integer | Set StartRow
   asc: true # Boolean | Set Asc
 }
 
@@ -429,10 +369,10 @@ end
 | **created_by** | **String** | Set createdBy | [optional] |
 | **start_date** | **String** | set start Date | [optional] |
 | **end_date** | **String** | set end Date | [optional] |
-| **page_size** | **Float** | Set PageSize | [optional] |
+| **page_size** | **Integer** | Set PageSize | [optional] |
 | **search_text** | **String** | search Text | [optional] |
 | **sort_field** | **String** | Set SortField | [optional] |
-| **start_row** | **String** | Set StartRow | [optional] |
+| **start_row** | **Integer** | Set StartRow | [optional] |
 | **asc** | **Boolean** | Set Asc | [optional] |
 
 ### Return type
@@ -441,7 +381,7 @@ end
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -460,18 +400,6 @@ This API suspends vendor into system
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecureVendorManagementApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -522,7 +450,7 @@ nil (empty response body)
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -541,18 +469,6 @@ This API gets timeline of particular vendor
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecureVendorManagementApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -604,7 +520,7 @@ end
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -623,18 +539,6 @@ This API unsuspends vendor into system
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecureVendorManagementApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -685,7 +589,7 @@ nil (empty response body)
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 

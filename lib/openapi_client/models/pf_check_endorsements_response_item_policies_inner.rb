@@ -50,13 +50,13 @@ module OpenapiClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'policy_id' => :'Float',
+        :'policy_id' => :'Integer',
         :'company_name' => :'String',
         :'policy_number' => :'String',
         :'premium' => :'Float',
         :'coverage_type' => :'String',
         :'coverage_type_description' => :'String',
-        :'company_type_id' => :'Float'
+        :'company_type_id' => :'Integer'
       }
     end
 

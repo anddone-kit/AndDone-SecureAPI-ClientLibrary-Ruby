@@ -144,7 +144,7 @@ module OpenapiClient
         :'use_same_as_physical_address' => :'Boolean',
         :'physical_address' => :'VendorResponseDTORemittanceAddress',
         :'remittance_address' => :'VendorResponseDTORemittanceAddress',
-        :'verification_results' => :'Array<VendorResponseDTOVerificationResultsInner>',
+        :'verification_results' => :'VendorResponseDTOVerificationResultsInner',
         :'created_by' => :'String',
         :'modified_by' => :'String',
         :'created_on' => :'String',
@@ -248,9 +248,7 @@ module OpenapiClient
       end
 
       if attributes.key?(:'verification_results')
-        if (value = attributes[:'verification_results']).is_a?(Array)
-          self.verification_results = value
-        end
+        self.verification_results = attributes[:'verification_results']
       end
 
       if attributes.key?(:'created_by')

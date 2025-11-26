@@ -9,7 +9,7 @@
 | **pf_type** | **String** | Type of premium finance | [optional] |
 | **is_endorsement** | **Boolean** | Indicates if it is an endorsement | [optional] |
 | **merchant_id** | **String** | Identifier of the merchant | [optional] |
-| **program_id** | **Float** | Identifier of the program | [optional] |
+| **program_id** | **Integer** | Identifier of the program | [optional] |
 | **payment_link_id** | **String** | Identifier of the payment link | [optional] |
 | **account_number** | **String** | Account number | [optional] |
 | **quote_status** | **String** | The status of the quote. | [optional] |
@@ -24,12 +24,13 @@
 | **finance_charge** | **Float** | Finance charge | [optional] |
 | **total_payments** | **Float** | Total payments | [optional] |
 | **payment_amount** | **Float** | Payment amount | [optional] |
-| **doc_stamp** | **Float** | Document stamp | [optional] |
+| **doc_stamp** | **Integer** | Document stamp | [optional] |
 | **first_due_date** | **String** | First due date | [optional] |
 | **apr** | **Float** | Annual percentage rate | [optional] |
 | **installments** | **Integer** | Number of installments | [optional] |
 | **batch_id** | **String** | Batch identifier | [optional] |
-| **payments_retained** | **Float** | Number of payments retained | [optional] |
+| **autopay_status** | **String** | Autopayment status | [optional] |
+| **payments_retained** | **Integer** | Number of payments retained | [optional] |
 | **payment_retained_amount** | **Float** | Amount retained from payments | [optional] |
 | **retail_agent_register_login_url** | **String** | URL for retail agent registration/login | [optional] |
 | **insured_name** | **String** | Name of the insured | [optional] |
@@ -77,6 +78,7 @@ instance = OpenapiClient::PFLiteQuoteByPaymentLinkResponse.new(
   apr: null,
   installments: null,
   batch_id: null,
+  autopay_status: null,
   payments_retained: null,
   payment_retained_amount: null,
   retail_agent_register_login_url: null,

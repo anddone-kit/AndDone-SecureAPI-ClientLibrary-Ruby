@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **policy_id** | **String** | This denotes the policy identifier. | [optional] |
+| **policy_id** | **Integer** | This denotes the policy identifier. | [optional] |
 | **premium** | **Float** | This denotes the premium amount. |  |
 | **down** | **Float** | This denotes the down amount. | [optional] |
 | **down_percent** | **Float** | This denotes the down percentage. | [optional] |

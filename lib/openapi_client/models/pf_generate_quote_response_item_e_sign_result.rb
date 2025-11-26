@@ -58,7 +58,7 @@ module OpenapiClient
         :'batch_id' => :'String',
         :'agent_url' => :'String',
         :'insured_url' => :'String',
-        :'e_sign_option' => :'Float'
+        :'e_sign_option' => :'Integer'
       }
     end
 

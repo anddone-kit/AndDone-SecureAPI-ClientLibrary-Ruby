@@ -8,7 +8,7 @@
 | **email** | **String** |  |  |
 | **care_of** | **String** |  | [optional] |
 | **unique_id** | **String** |  | [optional] |
-| **address** | [**QuoteRequestInsuredAddress**](QuoteRequestInsuredAddress.md) |  |  |
+| **address** | [**QuoteRequestInsuredAddress**](QuoteRequestInsuredAddress.md) |  | [optional] |
 | **has_data_change_agent_customer_number** | **Boolean** |  | [optional] |
 | **has_data_change_name** | **Boolean** |  | [optional] |
 | **has_data_change_address1** | **Boolean** |  | [optional] |

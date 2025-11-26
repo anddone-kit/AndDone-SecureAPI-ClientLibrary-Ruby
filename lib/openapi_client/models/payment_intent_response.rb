@@ -124,7 +124,7 @@ module OpenapiClient
         :'payment_description' => :'String',
         :'invoice_number' => :'String',
         :'expires_on' => :'String',
-        :'intent' => :'PaymentIntentRequestIntent',
+        :'intent' => :'PaymentIntentResponseIntent',
         :'save_for_future' => :'Boolean',
         :'enable_premium_finance' => :'Boolean',
         :'splits' => :'Array<PaymentIntentRequestSplitsInner>',

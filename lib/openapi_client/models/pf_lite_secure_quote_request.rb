@@ -27,6 +27,10 @@ module OpenapiClient
 
     attr_accessor :policies
 
+    attr_accessor :offer_auto_pay
+
+    attr_accessor :agent
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -35,7 +39,9 @@ module OpenapiClient
         :'merchant' => :'merchant',
         :'insured' => :'insured',
         :'program' => :'program',
-        :'policies' => :'policies'
+        :'policies' => :'policies',
+        :'offer_auto_pay' => :'offerAutoPay',
+        :'agent' => :'agent'
       }
     end
 
@@ -52,7 +58,9 @@ module OpenapiClient
         :'merchant' => :'PFLiteSecureQuoteRequestMerchant',
         :'insured' => :'PFLiteSecureQuoteRequestInsured',
         :'program' => :'PFLiteSecureQuoteRequestProgram',
-        :'policies' => :'Array<PFLiteSecureQuoteRequestPoliciesInner>'
+        :'policies' => :'Array<PFLiteSecureQuoteRequestPoliciesInner>',
+        :'offer_auto_pay' => :'Boolean',
+        :'agent' => :'PFLiteSecureQuoteRequestAgent'
       }
     end
 
@@ -112,6 +120,14 @@ module OpenapiClient
       else
         self.policies = nil
       end
+
+      if attributes.key?(:'offer_auto_pay')
+        self.offer_auto_pay = attributes[:'offer_auto_pay']
+      end
+
+      if attributes.key?(:'agent')
+        self.agent = attributes[:'agent']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -164,7 +180,9 @@ module OpenapiClient
           merchant == o.merchant &&
           insured == o.insured &&
           program == o.program &&
-          policies == o.policies
+          policies == o.policies &&
+          offer_auto_pay == o.offer_auto_pay &&
+          agent == o.agent
     end
 
     # @see the `==` method
@@ -176,7 +194,7 @@ module OpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [merchant_id, broker_fee, merchant, insured, program, policies].hash
+      [merchant_id, broker_fee, merchant, insured, program, policies, offer_auto_pay, agent].hash
     end
 
     # Builds the object from hash

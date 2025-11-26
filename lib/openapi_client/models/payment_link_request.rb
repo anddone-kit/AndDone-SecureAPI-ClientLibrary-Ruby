@@ -153,7 +153,7 @@ module OpenapiClient
         :'payment_description' => :'String',
         :'customers' => :'Array<PaymentLinkResponseCustomersInner>',
         :'invoice_number' => :'String',
-        :'expire_by' => :'Float',
+        :'expire_by' => :'Integer',
         :'expire_in' => :'Integer',
         :'expire_in_unit' => :'String',
         :'expire_on' => :'String',
@@ -170,7 +170,7 @@ module OpenapiClient
         :'reference_type' => :'String',
         :'reference_number' => :'String',
         :'reference_key' => :'String',
-        :'reference_data_list' => :'Array<PaymentLinkResponseReferenceDataListInner>',
+        :'reference_data_list' => :'Array<PaymentLinkRequestReferenceDataListInner>',
         :'enable_premium_finance' => :'Boolean',
         :'suppress_technology_fee' => :'Boolean',
         :'override_technology_fee' => :'Float',
@@ -223,6 +223,8 @@ module OpenapiClient
 
       if attributes.key?(:'payment_description')
         self.payment_description = attributes[:'payment_description']
+      else
+        self.payment_description = nil
       end
 
       if attributes.key?(:'customers')
@@ -371,6 +373,10 @@ module OpenapiClient
         invalid_properties.push('invalid value for "amount", amount cannot be nil.')
       end
 
+      if @payment_description.nil?
+        invalid_properties.push('invalid value for "payment_description", payment_description cannot be nil.')
+      end
+
       if @expire_in.nil?
         invalid_properties.push('invalid value for "expire_in", expire_in cannot be nil.')
       end
@@ -397,6 +403,7 @@ module OpenapiClient
       return false if @merchant_id.nil?
       return false if @title.nil?
       return false if @amount.nil?
+      return false if @payment_description.nil?
       return false if @expire_in.nil?
       return false if @expire_in_unit.nil?
       expire_in_unit_validator = EnumAttributeValidator.new('String', ["Seconds", "Minutes", "Hours", "Days", "Weeks"])

@@ -254,7 +254,7 @@ module OpenapiClient
         :'reference_transaction_id' => :'String',
         :'reference_customer_id' => :'String',
         :'recurring_id' => :'String',
-        :'batch_id' => :'Float',
+        :'batch_id' => :'Integer',
         :'transaction_status' => :'String',
         :'settlement_date' => :'String',
         :'auth_code' => :'String',

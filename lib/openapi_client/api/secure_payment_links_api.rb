@@ -94,7 +94,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'PaymentLinkResponse'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecurePaymentLinksApi.secure_paymentlinks_details_post",
@@ -184,7 +184,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'PaymentLinkExpiresResponse'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecurePaymentLinksApi.secure_paymentlinks_expirations_post",
@@ -284,7 +284,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'PaymentLinkResponse'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecurePaymentLinksApi.secure_paymentlinks_id_put",
@@ -378,7 +378,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'PaymentLinkResponse'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecurePaymentLinksApi.secure_paymentlinks_post",

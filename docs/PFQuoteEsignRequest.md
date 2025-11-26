@@ -11,6 +11,7 @@
 | **mac_address** | **String** | This denotes the MAC address of the client. | [optional] |
 | **captcha_token** | **String** | This denotes the captchaToken. | [optional] |
 | **action_name** | **String** | This denotes the action name. | [optional] |
+| **is_sign_apa** | **Boolean** | This denotes isSignAPA status. | [optional] |
 
 ## Example
 
@@ -24,7 +25,8 @@ instance = OpenapiClient::PFQuoteEsignRequest.new(
   ip_address: null,
   mac_address: null,
   captcha_token: null,
-  action_name: null
+  action_name: null,
+  is_sign_apa: null
 )
 ```
 

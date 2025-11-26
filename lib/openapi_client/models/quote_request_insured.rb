@@ -137,8 +137,6 @@ module OpenapiClient
 
       if attributes.key?(:'address')
         self.address = attributes[:'address']
-      else
-        self.address = nil
       end
 
       if attributes.key?(:'has_data_change_agent_customer_number')
@@ -195,10 +193,6 @@ module OpenapiClient
         invalid_properties.push('invalid value for "email", email cannot be nil.')
       end
 
-      if @address.nil?
-        invalid_properties.push('invalid value for "address", address cannot be nil.')
-      end
-
       invalid_properties
     end
 
@@ -207,7 +201,6 @@ module OpenapiClient
     def valid?
       warn '[DEPRECATED] the `valid?` method is obsolete'
       return false if @email.nil?
-      return false if @address.nil?
       true
     end
 

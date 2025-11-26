@@ -144,8 +144,6 @@ module OpenapiClient
 
       if attributes.key?(:'vendor_db_name')
         self.vendor_db_name = attributes[:'vendor_db_name']
-      else
-        self.vendor_db_name = nil
       end
 
       if attributes.key?(:'legal_entity_type')
@@ -214,10 +212,6 @@ module OpenapiClient
         invalid_properties.push('invalid value for "vendor_name", vendor_name cannot be nil.')
       end
 
-      if @vendor_db_name.nil?
-        invalid_properties.push('invalid value for "vendor_db_name", vendor_db_name cannot be nil.')
-      end
-
       if @legal_entity_type.nil?
         invalid_properties.push('invalid value for "legal_entity_type", legal_entity_type cannot be nil.')
       end
@@ -250,7 +244,6 @@ module OpenapiClient
     def valid?
       warn '[DEPRECATED] the `valid?` method is obsolete'
       return false if @vendor_name.nil?
-      return false if @vendor_db_name.nil?
       return false if @legal_entity_type.nil?
       legal_entity_type_validator = EnumAttributeValidator.new('String', ["NA", "Corporation", "LimitedLiabilityCompany", "LimitedLiabilityPartnership", "LimitedPartnership", "Partnership", "Individual"])
       return false unless legal_entity_type_validator.valid?(@legal_entity_type)

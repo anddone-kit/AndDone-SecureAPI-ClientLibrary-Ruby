@@ -17,6 +17,8 @@ module OpenapiClient
   class QuoteRequest
     attr_accessor :merchant_id
 
+    attr_accessor :offer_auto_pay
+
     attr_accessor :payment_intent_id
 
     attr_accessor :details
@@ -31,6 +33,7 @@ module OpenapiClient
     def self.attribute_map
       {
         :'merchant_id' => :'merchantId',
+        :'offer_auto_pay' => :'offerAutoPay',
         :'payment_intent_id' => :'paymentIntentId',
         :'details' => :'details',
         :'insured' => :'insured',
@@ -48,6 +51,7 @@ module OpenapiClient
     def self.openapi_types
       {
         :'merchant_id' => :'String',
+        :'offer_auto_pay' => :'Boolean',
         :'payment_intent_id' => :'String',
         :'details' => :'QuoteRequestDetails',
         :'insured' => :'QuoteRequestInsured',
@@ -79,6 +83,10 @@ module OpenapiClient
 
       if attributes.key?(:'merchant_id')
         self.merchant_id = attributes[:'merchant_id']
+      end
+
+      if attributes.key?(:'offer_auto_pay')
+        self.offer_auto_pay = attributes[:'offer_auto_pay']
       end
 
       if attributes.key?(:'payment_intent_id')
@@ -160,6 +168,7 @@ module OpenapiClient
       return true if self.equal?(o)
       self.class == o.class &&
           merchant_id == o.merchant_id &&
+          offer_auto_pay == o.offer_auto_pay &&
           payment_intent_id == o.payment_intent_id &&
           details == o.details &&
           insured == o.insured &&
@@ -176,7 +185,7 @@ module OpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [merchant_id, payment_intent_id, details, insured, agent, policies].hash
+      [merchant_id, offer_auto_pay, payment_intent_id, details, insured, agent, policies].hash
     end
 
     # Builds the object from hash

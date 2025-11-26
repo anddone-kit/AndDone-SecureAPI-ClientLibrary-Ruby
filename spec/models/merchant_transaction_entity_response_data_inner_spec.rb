@@ -99,12 +99,6 @@ describe OpenapiClient::MerchantTransactionEntityResponseDataInner do
     end
   end
 
-  describe 'test attribute "customer_account_id"' do
-    it 'should work' do
-      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
-    end
-  end
-
   describe 'test attribute "recurring_id"' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
@@ -203,12 +197,6 @@ describe OpenapiClient::MerchantTransactionEntityResponseDataInner do
     end
   end
 
-  describe 'test attribute "tip_amount"' do
-    it 'should work' do
-      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
-    end
-  end
-
   describe 'test attribute "convenience_amount"' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
@@ -216,18 +204,6 @@ describe OpenapiClient::MerchantTransactionEntityResponseDataInner do
   end
 
   describe 'test attribute "capture_amount"' do
-    it 'should work' do
-      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
-    end
-  end
-
-  describe 'test attribute "tax_percent"' do
-    it 'should work' do
-      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
-    end
-  end
-
-  describe 'test attribute "tax_amount"' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end
@@ -306,6 +282,12 @@ describe OpenapiClient::MerchantTransactionEntityResponseDataInner do
   end
 
   describe 'test attribute "processor_name"' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  describe 'test attribute "processor_display_name"' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end
@@ -417,6 +399,12 @@ describe OpenapiClient::MerchantTransactionEntityResponseDataInner do
     end
   end
 
+  describe 'test attribute "account_token"' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
   describe 'test attribute "payment_type"' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
@@ -434,6 +422,18 @@ describe OpenapiClient::MerchantTransactionEntityResponseDataInner do
       # validator.allowable_values.each do |value|
       #   expect { instance.payment_category = value }.not_to raise_error
       # end
+    end
+  end
+
+  describe 'test attribute "refund_reason"' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  describe 'test attribute "refund_detail"' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end
   end
 

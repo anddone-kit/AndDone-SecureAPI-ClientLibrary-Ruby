@@ -47,7 +47,7 @@ module OpenapiClient
     # @option opts [Boolean] :export_to_pdf Export To PDF
     # @option opts [String] :transaction_origins Type of origin used in the transaction
     # @option opts [String] :transaction_source_type Transaction source type of the transaction
-    # @option opts [Float] :source_id Set SourceId
+    # @option opts [Integer] :source_id Set SourceId
     # @option opts [String] :trace_numbers TraceNumbers associated with the transaction
     # @option opts [String] :bin_number BinNumber
     # @option opts [String] :process_method Process Method used for the transaction
@@ -65,7 +65,7 @@ module OpenapiClient
     # @option opts [String] :batch_id BatchId
     # @option opts [String] :sort_field SortField
     # @option opts [Integer] :start_row Set StartRow
-    # @option opts [Float] :page_size Set PageSize
+    # @option opts [Integer] :page_size Set PageSize
     # @option opts [Boolean] :asc Set Asc
     # @return [nil]
     def secure_payments_export_post(x_api_key, x_app_key, x_version, origin, opts = {})
@@ -101,7 +101,7 @@ module OpenapiClient
     # @option opts [Boolean] :export_to_pdf Export To PDF
     # @option opts [String] :transaction_origins Type of origin used in the transaction
     # @option opts [String] :transaction_source_type Transaction source type of the transaction
-    # @option opts [Float] :source_id Set SourceId
+    # @option opts [Integer] :source_id Set SourceId
     # @option opts [String] :trace_numbers TraceNumbers associated with the transaction
     # @option opts [String] :bin_number BinNumber
     # @option opts [String] :process_method Process Method used for the transaction
@@ -119,7 +119,7 @@ module OpenapiClient
     # @option opts [String] :batch_id BatchId
     # @option opts [String] :sort_field SortField
     # @option opts [Integer] :start_row Set StartRow
-    # @option opts [Float] :page_size Set PageSize
+    # @option opts [Integer] :page_size Set PageSize
     # @option opts [Boolean] :asc Set Asc
     # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
     def secure_payments_export_post_with_http_info(x_api_key, x_app_key, x_version, origin, opts = {})
@@ -221,7 +221,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type]
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecurePaymentsApi.secure_payments_export_post",
@@ -315,7 +315,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'TransactionDetailResponse'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecurePaymentsApi.secure_payments_post",
@@ -362,7 +362,7 @@ module OpenapiClient
     # @option opts [Boolean] :export_to_pdf Export To PDF
     # @option opts [String] :transaction_origins Type of origin used in the transaction
     # @option opts [String] :transaction_source_type Transaction source type of the transaction
-    # @option opts [Float] :source_id Set SourceId
+    # @option opts [Integer] :source_id Set SourceId
     # @option opts [String] :trace_numbers TraceNumbers associated with the transaction
     # @option opts [String] :bin_number BinNumber
     # @option opts [String] :process_method Process Method used for the transaction
@@ -378,9 +378,10 @@ module OpenapiClient
     # @option opts [String] :payment_categories Set PaymentCategories
     # @option opts [Boolean] :suppress_technology_fee SuppressTechnologyFee
     # @option opts [String] :batch_id BatchId
+    # @option opts [Boolean] :transactions_count Set whether to return only the transactions count
     # @option opts [String] :sort_field SortField
     # @option opts [Integer] :start_row Set StartRow
-    # @option opts [Float] :page_size Set PageSize
+    # @option opts [Integer] :page_size Set PageSize
     # @option opts [Boolean] :asc Set Asc
     # @return [MerchantTransactionEntityResponse]
     def secure_payments_search_post(x_api_key, x_app_key, x_version, origin, opts = {})
@@ -416,7 +417,7 @@ module OpenapiClient
     # @option opts [Boolean] :export_to_pdf Export To PDF
     # @option opts [String] :transaction_origins Type of origin used in the transaction
     # @option opts [String] :transaction_source_type Transaction source type of the transaction
-    # @option opts [Float] :source_id Set SourceId
+    # @option opts [Integer] :source_id Set SourceId
     # @option opts [String] :trace_numbers TraceNumbers associated with the transaction
     # @option opts [String] :bin_number BinNumber
     # @option opts [String] :process_method Process Method used for the transaction
@@ -432,9 +433,10 @@ module OpenapiClient
     # @option opts [String] :payment_categories Set PaymentCategories
     # @option opts [Boolean] :suppress_technology_fee SuppressTechnologyFee
     # @option opts [String] :batch_id BatchId
+    # @option opts [Boolean] :transactions_count Set whether to return only the transactions count
     # @option opts [String] :sort_field SortField
     # @option opts [Integer] :start_row Set StartRow
-    # @option opts [Float] :page_size Set PageSize
+    # @option opts [Integer] :page_size Set PageSize
     # @option opts [Boolean] :asc Set Asc
     # @return [Array<(MerchantTransactionEntityResponse, Integer, Hash)>] MerchantTransactionEntityResponse data, response status code and response headers
     def secure_payments_search_post_with_http_info(x_api_key, x_app_key, x_version, origin, opts = {})
@@ -512,6 +514,7 @@ module OpenapiClient
       query_params[:'paymentCategories'] = opts[:'payment_categories'] if !opts[:'payment_categories'].nil?
       query_params[:'suppressTechnologyFee'] = opts[:'suppress_technology_fee'] if !opts[:'suppress_technology_fee'].nil?
       query_params[:'batchId'] = opts[:'batch_id'] if !opts[:'batch_id'].nil?
+      query_params[:'transactionsCount'] = opts[:'transactions_count'] if !opts[:'transactions_count'].nil?
       query_params[:'sortField'] = opts[:'sort_field'] if !opts[:'sort_field'].nil?
       query_params[:'startRow'] = opts[:'start_row'] if !opts[:'start_row'].nil?
       query_params[:'pageSize'] = opts[:'page_size'] if !opts[:'page_size'].nil?
@@ -536,7 +539,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'MerchantTransactionEntityResponse'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecurePaymentsApi.secure_payments_search_post",
@@ -630,7 +633,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'TransactionPaymentResponse'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecurePaymentsApi.secure_paymentsdetails_post",

@@ -93,9 +93,9 @@ module OpenapiClient
         :'created_by' => :'String',
         :'modified_on' => :'String',
         :'modified_by' => :'String',
-        :'capture_count' => :'Float',
+        :'capture_count' => :'Integer',
         :'capture_amount' => :'Float',
-        :'voided_count' => :'Float',
+        :'voided_count' => :'Integer',
         :'voided_amount' => :'Float'
       }
     end

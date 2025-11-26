@@ -13,7 +13,7 @@
 | **transaction_id** | **String** |  | [optional] |
 | **callback_api_url** | **String** |  | [optional] |
 | **callback_message** | **String** |  | [optional] |
-| **redirection_time** | **Float** |  | [optional] |
+| **redirection_time** | **Integer** |  | [optional] |
 
 ## Example
 

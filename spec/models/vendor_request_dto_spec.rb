@@ -48,7 +48,7 @@ describe OpenapiClient::VendorRequestDTO do
   describe 'test attribute "legal_entity_type"' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
-      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["Corporation", "LimitedLiabilityCompany", "LimitedLiabilityPartnership", "LimitedPartnership", "Partnership"])
+      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["NA", "Corporation", "LimitedLiabilityCompany", "LimitedLiabilityPartnership", "LimitedPartnership", "Partnership", "Individual"])
       # validator.allowable_values.each do |value|
       #   expect { instance.legal_entity_type = value }.not_to raise_error
       # end
@@ -58,7 +58,7 @@ describe OpenapiClient::VendorRequestDTO do
   describe 'test attribute "payment_method_type"' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
-      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["Checks"])
+      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["Check"])
       # validator.allowable_values.each do |value|
       #   expect { instance.payment_method_type = value }.not_to raise_error
       # end
@@ -68,7 +68,7 @@ describe OpenapiClient::VendorRequestDTO do
   describe 'test attribute "notification_type"' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
-      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["NA", "Fax", "email"])
+      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["NA", "Email"])
       # validator.allowable_values.each do |value|
       #   expect { instance.notification_type = value }.not_to raise_error
       # end

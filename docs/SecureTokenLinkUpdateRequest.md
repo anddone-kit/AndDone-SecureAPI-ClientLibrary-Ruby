@@ -8,7 +8,7 @@
 | **expire_in** | **Integer** |  |  |
 | **response_type** | **String** |  | [optional] |
 | **expire_in_unit** | **String** |  |  |
-| **intent** | [**PaymentIntentRequestIntent**](PaymentIntentRequestIntent.md) |  |  |
+| **intent** | [**PaymentIntentResponseIntent**](PaymentIntentResponseIntent.md) |  |  |
 | **call_back_parameters** | [**PaymentLinkResponseCallbackParameters**](PaymentLinkResponseCallbackParameters.md) |  | [optional] |
 
 ## Example

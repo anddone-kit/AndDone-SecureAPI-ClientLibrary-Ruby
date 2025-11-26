@@ -39,6 +39,12 @@ describe OpenapiClient::TransactionPaymentResponseAchTenderInfo do
     end
   end
 
+  describe 'test attribute "account_type"' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
   describe 'test attribute "check_type"' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
@@ -97,24 +103,6 @@ describe OpenapiClient::TransactionPaymentResponseAchTenderInfo do
     end
   end
 
-  describe 'test attribute "tax_amount"' do
-    it 'should work' do
-      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
-    end
-  end
-
-  describe 'test attribute "tax_after_discount"' do
-    it 'should work' do
-      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
-    end
-  end
-
-  describe 'test attribute "tax_percent"' do
-    it 'should work' do
-      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
-    end
-  end
-
   describe 'test attribute "adjustment_percent_value"' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
@@ -148,6 +136,10 @@ describe OpenapiClient::TransactionPaymentResponseAchTenderInfo do
   describe 'test attribute "payment_adjustment_type"' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["None", "CashIncentive", "Surcharge", "ConvenienceFee", "CashDiscount"])
+      # validator.allowable_values.each do |value|
+      #   expect { instance.payment_adjustment_type = value }.not_to raise_error
+      # end
     end
   end
 
@@ -181,24 +173,6 @@ describe OpenapiClient::TransactionPaymentResponseAchTenderInfo do
     end
   end
 
-  describe 'test attribute "discount_type"' do
-    it 'should work' do
-      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
-    end
-  end
-
-  describe 'test attribute "discount_percent"' do
-    it 'should work' do
-      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
-    end
-  end
-
-  describe 'test attribute "discount_amount"' do
-    it 'should work' do
-      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
-    end
-  end
-
   describe 'test attribute "commission_type"' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
@@ -210,6 +184,12 @@ describe OpenapiClient::TransactionPaymentResponseAchTenderInfo do
   end
 
   describe 'test attribute "commission_value"' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
+  describe 'test attribute "commission_fixed_value"' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end

@@ -73,7 +73,7 @@ module OpenapiClient
         :'expire_in' => :'Integer',
         :'response_type' => :'String',
         :'expire_in_unit' => :'String',
-        :'intent' => :'PaymentIntentRequestIntent',
+        :'intent' => :'PaymentIntentResponseIntent',
         :'call_back_parameters' => :'PaymentLinkResponseCallbackParameters'
       }
     end

@@ -21,7 +21,7 @@
 | **track_data** | **String** |  | [optional] |
 | **remove_discounting** | **Boolean** |  | [optional] |
 | **suppress_commission** | **Boolean** |  | [optional] |
-| **amount** | **Float** |  | [optional] |
+| **amount** | **Float** |  |  |
 | **convenience_amount** | **Float** |  | [optional] |
 | **pre_auth_code** | **String** |  | [optional] |
 | **create_account_token** | **Boolean** |  | [optional] |

@@ -17,9 +17,9 @@
 | **created_by** | **String** |  | [optional] |
 | **modified_on** | **String** |  | [optional] |
 | **modified_by** | **String** |  | [optional] |
-| **capture_count** | **Float** |  | [optional] |
+| **capture_count** | **Integer** |  | [optional] |
 | **capture_amount** | **Float** |  | [optional] |
-| **voided_count** | **Float** |  | [optional] |
+| **voided_count** | **Integer** |  | [optional] |
 | **voided_amount** | **Float** |  | [optional] |
 
 ## Example

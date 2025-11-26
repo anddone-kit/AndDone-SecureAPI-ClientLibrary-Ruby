@@ -92,7 +92,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type]
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecureVendorManagementApi.vendorapi_secure_merchants_vendors_delete_post",
@@ -186,7 +186,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'VendorResponseDTO'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecureVendorManagementApi.vendorapi_secure_merchants_vendors_details_post",
@@ -280,7 +280,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'SecureVendorResponseDTO'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecureVendorManagementApi.vendorapi_secure_merchants_vendors_edit_post",
@@ -374,7 +374,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'SecureVendorResponseDTO'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecureVendorManagementApi.vendorapi_secure_merchants_vendors_post",
@@ -407,10 +407,10 @@ module OpenapiClient
     # @option opts [String] :created_by Set createdBy
     # @option opts [String] :start_date set start Date
     # @option opts [String] :end_date set end Date
-    # @option opts [Float] :page_size Set PageSize
+    # @option opts [Integer] :page_size Set PageSize
     # @option opts [String] :search_text search Text
     # @option opts [String] :sort_field Set SortField
-    # @option opts [String] :start_row Set StartRow
+    # @option opts [Integer] :start_row Set StartRow
     # @option opts [Boolean] :asc Set Asc
     # @return [PageVendorResponseDTO]
     def vendorapi_secure_merchants_vendors_search_post(x_api_key, x_app_key, x_version, origin, opts = {})
@@ -432,10 +432,10 @@ module OpenapiClient
     # @option opts [String] :created_by Set createdBy
     # @option opts [String] :start_date set start Date
     # @option opts [String] :end_date set end Date
-    # @option opts [Float] :page_size Set PageSize
+    # @option opts [Integer] :page_size Set PageSize
     # @option opts [String] :search_text search Text
     # @option opts [String] :sort_field Set SortField
-    # @option opts [String] :start_row Set StartRow
+    # @option opts [Integer] :start_row Set StartRow
     # @option opts [Boolean] :asc Set Asc
     # @return [Array<(PageVendorResponseDTO, Integer, Hash)>] PageVendorResponseDTO data, response status code and response headers
     def vendorapi_secure_merchants_vendors_search_post_with_http_info(x_api_key, x_app_key, x_version, origin, opts = {})
@@ -500,7 +500,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'PageVendorResponseDTO'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecureVendorManagementApi.vendorapi_secure_merchants_vendors_search_post",
@@ -592,7 +592,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type]
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecureVendorManagementApi.vendorapi_secure_merchants_vendors_suspend_post",
@@ -686,7 +686,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'Array<VendorTimelineResponseListInner>'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecureVendorManagementApi.vendorapi_secure_merchants_vendors_timeline_post",
@@ -778,7 +778,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type]
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecureVendorManagementApi.vendorapi_secure_merchants_vendors_unsuspend_post",

@@ -6,6 +6,7 @@
 | ---- | ---- | ----------- | ----- |
 | **name** | **String** |  | [optional] |
 | **type** | **String** |  | [optional] |
+| **is_aggregate_amount** | **Boolean** |  | [optional] |
 
 ## Example
 
@@ -14,7 +15,8 @@ require 'openapi_client'
 
 instance = OpenapiClient::HeadingDto.new(
   name: null,
-  type: null
+  type: null,
+  is_aggregate_amount: null
 )
 ```
 

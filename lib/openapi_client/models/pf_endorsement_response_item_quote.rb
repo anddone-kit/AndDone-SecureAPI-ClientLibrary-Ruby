@@ -70,8 +70,8 @@ module OpenapiClient
         :'payment_retained_amount' => :'paymentRetainedAmount',
         :'e_sign_result' => :'eSignResult',
         :'is_down_payment_required' => :'isDownPaymentRequired',
-        :'is_esign_required' => :'IsEsignRequired',
-        :'is_endorsement' => :'IsEndorsement'
+        :'is_esign_required' => :'isEsignRequired',
+        :'is_endorsement' => :'isEndorsement'
       }
     end
 
@@ -84,18 +84,18 @@ module OpenapiClient
     def self.openapi_types
       {
         :'pfa' => :'String',
-        :'quote_key' => :'Float',
+        :'quote_key' => :'Integer',
         :'premium' => :'Float',
         :'down_amount' => :'Float',
         :'amount_financed' => :'Float',
         :'finance_charge' => :'Float',
         :'total_payments' => :'Float',
         :'payment_amount' => :'Float',
-        :'doc_stamp' => :'Float',
+        :'doc_stamp' => :'Integer',
         :'first_due_date' => :'String',
         :'apr' => :'Float',
         :'installments' => :'Integer',
-        :'payments_retained' => :'Float',
+        :'payments_retained' => :'Integer',
         :'payment_retained_amount' => :'Float',
         :'e_sign_result' => :'PFEndorsementResponseItemQuoteESignResult',
         :'is_down_payment_required' => :'Boolean',

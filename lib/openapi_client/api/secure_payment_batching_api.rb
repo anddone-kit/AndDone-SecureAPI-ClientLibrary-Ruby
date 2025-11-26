@@ -94,7 +94,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'Array<PaymentBatchDetailsResponse>'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecurePaymentBatchingApi.secure_batches_details_post",
@@ -186,7 +186,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type]
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecurePaymentBatchingApi.secure_batches_execute_post",
@@ -211,8 +211,8 @@ module OpenapiClient
     # @param x_version [Float] x-version
     # @param origin [String] origin
     # @param [Hash] opts the optional parameters
-    # @option opts [Float] :start_row Set StartRow
-    # @option opts [Float] :page_size Set PageSize
+    # @option opts [Integer] :start_row Set StartRow
+    # @option opts [Integer] :page_size Set PageSize
     # @option opts [String] :sort_field Set SortField
     # @option opts [Boolean] :asc Set Asc
     # @return [PaymentBatchResponse]
@@ -227,8 +227,8 @@ module OpenapiClient
     # @param x_version [Float] x-version
     # @param origin [String] origin
     # @param [Hash] opts the optional parameters
-    # @option opts [Float] :start_row Set StartRow
-    # @option opts [Float] :page_size Set PageSize
+    # @option opts [Integer] :start_row Set StartRow
+    # @option opts [Integer] :page_size Set PageSize
     # @option opts [String] :sort_field Set SortField
     # @option opts [Boolean] :asc Set Asc
     # @return [Array<(PaymentBatchResponse, Integer, Hash)>] PaymentBatchResponse data, response status code and response headers
@@ -281,7 +281,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'PaymentBatchResponse'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecurePaymentBatchingApi.secure_batches_post",
@@ -375,7 +375,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type] || 'Array<PaymentBatchEventLogResponse>'
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecurePaymentBatchingApi.secure_batches_timelines_post",
@@ -467,7 +467,7 @@ module OpenapiClient
       return_type = opts[:debug_return_type]
 
       # auth_names
-      auth_names = opts[:debug_auth_names] || ['x-api-key', 'x-app-key']
+      auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
         :operation => :"SecurePaymentBatchingApi.secure_batches_transactions_cancel_post",

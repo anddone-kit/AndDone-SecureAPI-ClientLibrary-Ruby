@@ -11,7 +11,7 @@
 | **payment_description** | **String** |  | [optional] |
 | **invoice_number** | **String** |  | [optional] |
 | **expires_on** | **String** |  | [optional] |
-| **intent** | [**PaymentIntentRequestIntent**](PaymentIntentRequestIntent.md) |  | [optional] |
+| **intent** | [**PaymentIntentResponseIntent**](PaymentIntentResponseIntent.md) |  | [optional] |
 | **save_for_future** | **Boolean** |  | [optional] |
 | **enable_premium_finance** | **Boolean** |  | [optional] |
 | **splits** | [**Array&lt;PaymentIntentRequestSplitsInner&gt;**](PaymentIntentRequestSplitsInner.md) |  | [optional] |

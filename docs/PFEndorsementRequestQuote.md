@@ -5,12 +5,12 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **account_number** | **String** |  | [optional] |
-| **agreement_id** | **String** | This denotes the agreementId received in check endorsement API. |  |
+| **agreement_id** | **Integer** | This denotes the agreementId received in check endorsement API. |  |
 | **merchant_reference** | **String** |  |  |
 | **policies** | [**Array&lt;PFEndorsementRequestQuotePoliciesInner&gt;**](PFEndorsementRequestQuotePoliciesInner.md) |  |  |
 | **details** | [**PFEndorsementRequestQuoteDetails**](PFEndorsementRequestQuoteDetails.md) |  | [optional] |
 | **insured** | [**PFEndorsementRequestQuoteInsured**](PFEndorsementRequestQuoteInsured.md) |  | [optional] |
-| **agent** | [**PFEndorsementRequestQuoteAgent**](PFEndorsementRequestQuoteAgent.md) |  | [optional] |
+| **agent** | [**PFLiteSecureQuoteRequestAgent**](PFLiteSecureQuoteRequestAgent.md) |  | [optional] |
 | **communication** | [**PFEndorsementRequestQuoteCommunication**](PFEndorsementRequestQuoteCommunication.md) |  | [optional] |
 
 ## Example

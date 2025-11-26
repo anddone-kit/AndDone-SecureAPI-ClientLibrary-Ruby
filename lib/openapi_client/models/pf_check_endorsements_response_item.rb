@@ -47,8 +47,8 @@ module OpenapiClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'agreement_id' => :'Float',
-        :'client_id' => :'Float',
+        :'agreement_id' => :'Integer',
+        :'client_id' => :'Integer',
         :'account_number' => :'String',
         :'client_name' => :'String',
         :'is_commercial' => :'Boolean',

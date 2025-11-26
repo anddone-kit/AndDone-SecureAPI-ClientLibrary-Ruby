@@ -9,7 +9,7 @@
 | **merchant_id** | **String** |  | [optional] |
 | **previous_event_status** | **String** |  | [optional] |
 | **event_status** | **String** |  | [optional] |
-| **voided_count** | **Float** |  | [optional] |
+| **voided_count** | **Integer** |  | [optional] |
 | **voided_amount** | **Float** |  | [optional] |
 | **closed_on** | **String** |  | [optional] |
 | **event_date** | **String** |  | [optional] |

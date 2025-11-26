@@ -40,7 +40,7 @@ module OpenapiClient
       {
         :'unique_id' => :'String',
         :'email' => :'String',
-        :'address' => :'QuoteRequestAgentAddress'
+        :'address' => :'QuoteRequestInsuredAddress'
       }
     end
 

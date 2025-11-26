@@ -9,7 +9,7 @@
 | **batch_id** | **String** |  | [optional] |
 | **agent_url** | **String** |  | [optional] |
 | **insured_url** | **String** |  | [optional] |
-| **e_sign_option** | **Float** |  | [optional] |
+| **e_sign_option** | **Integer** |  | [optional] |
 
 ## Example
 

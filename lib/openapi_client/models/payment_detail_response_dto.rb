@@ -95,7 +95,7 @@ module OpenapiClient
         :'vendor_name' => :'String',
         :'merchant_dba_name' => :'String',
         :'payment_id' => :'String',
-        :'check_number' => :'Float',
+        :'check_number' => :'Integer',
         :'payment_method' => :'String',
         :'amount' => :'Float',
         :'bank_name' => :'String',

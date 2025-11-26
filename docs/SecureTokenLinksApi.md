@@ -22,18 +22,6 @@ This API is used for getting Token Links by TokenLink ID
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecureTokenLinksApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -85,7 +73,7 @@ end
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -104,18 +92,6 @@ This API expires the token link.
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecureTokenLinksApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -167,7 +143,7 @@ end
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -186,18 +162,6 @@ This API is used for getting all Token Links for Merchant
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecureTokenLinksApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
@@ -219,8 +183,8 @@ opts = {
   to_expiry_date: 'to_expiry_date_example', # String | toExpiryDate
   from_date: 'from_date_example', # String | fromDate
   to_date: 'to_date_example', # String | toDate
-  start_row: 8.14, # Float | Set StartRow
-  page_size: 8.14, # Float | Set PageSize
+  start_row: 56, # Integer | Set StartRow
+  page_size: 56, # Integer | Set PageSize
   sort_field: 'sort_field_example', # String | Set SortField
   asc: true # Boolean | Set Asc
 }
@@ -274,8 +238,8 @@ end
 | **to_expiry_date** | **String** | toExpiryDate | [optional] |
 | **from_date** | **String** | fromDate | [optional] |
 | **to_date** | **String** | toDate | [optional] |
-| **start_row** | **Float** | Set StartRow | [optional] |
-| **page_size** | **Float** | Set PageSize | [optional] |
+| **start_row** | **Integer** | Set StartRow | [optional] |
+| **page_size** | **Integer** | Set PageSize | [optional] |
 | **sort_field** | **String** | Set SortField | [optional] |
 | **asc** | **Boolean** | Set Asc | [optional] |
 
@@ -285,7 +249,7 @@ end
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -304,25 +268,13 @@ This API is use to create Secure Token Links
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecureTokenLinksApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
 x_app_key = 'x_app_key_example' # String | an authorization header
 x_version = 8.14 # Float | x-version
 origin = 'origin_example' # String | origin
-token_link_secure_request = OpenapiClient::TokenLinkSecureRequest.new({title: 'title_example', expire_in: 37, expire_in_unit: 'Seconds', intent: OpenapiClient::TokenLinkSecureRequestIntent.new({payment_types: ['CreditCard']})}) # TokenLinkSecureRequest | Secure Token Link Request
+token_link_secure_request = OpenapiClient::TokenLinkSecureRequest.new({title: 'title_example', expire_in: 37, expire_in_unit: 'Seconds', intent: OpenapiClient::PaymentIntentRequestIntent.new({payment_types: ['CreditCard']})}) # TokenLinkSecureRequest | Secure Token Link Request
 
 begin
   # This API is use to create Secure Token Links
@@ -367,7 +319,7 @@ end
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -386,25 +338,13 @@ This API will update the expireIn and paymentType of Token Link.
 ```ruby
 require 'time'
 require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-api-key'] = 'Bearer'
-
-  # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['x-app-key'] = 'Bearer'
-end
 
 api_instance = OpenapiClient::SecureTokenLinksApi.new
 x_api_key = 'x_api_key_example' # String | an authorization header
 x_app_key = 'x_app_key_example' # String | an authorization header
 x_version = 8.14 # Float | x-version
 origin = 'origin_example' # String | origin
-secure_token_link_update_request = OpenapiClient::SecureTokenLinkUpdateRequest.new({token_link_id: 'token_link_id_example', expire_in: 37, expire_in_unit: 'Seconds', intent: OpenapiClient::PaymentIntentRequestIntent.new}) # SecureTokenLinkUpdateRequest | Secure Token Link Update Request
+secure_token_link_update_request = OpenapiClient::SecureTokenLinkUpdateRequest.new({token_link_id: 'token_link_id_example', expire_in: 37, expire_in_unit: 'Seconds', intent: OpenapiClient::PaymentIntentResponseIntent.new}) # SecureTokenLinkUpdateRequest | Secure Token Link Update Request
 
 begin
   # This API will update the expireIn and paymentType of Token Link.
@@ -448,7 +388,7 @@ nil (empty response body)
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 

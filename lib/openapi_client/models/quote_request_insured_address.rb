@@ -99,20 +99,14 @@ module OpenapiClient
 
       if attributes.key?(:'city')
         self.city = attributes[:'city']
-      else
-        self.city = nil
       end
 
       if attributes.key?(:'state')
         self.state = attributes[:'state']
-      else
-        self.state = nil
       end
 
       if attributes.key?(:'zip')
         self.zip = attributes[:'zip']
-      else
-        self.zip = nil
       end
 
       if attributes.key?(:'phone')
@@ -133,18 +127,6 @@ module OpenapiClient
         invalid_properties.push('invalid value for "address1", address1 cannot be nil.')
       end
 
-      if @city.nil?
-        invalid_properties.push('invalid value for "city", city cannot be nil.')
-      end
-
-      if @state.nil?
-        invalid_properties.push('invalid value for "state", state cannot be nil.')
-      end
-
-      if @zip.nil?
-        invalid_properties.push('invalid value for "zip", zip cannot be nil.')
-      end
-
       invalid_properties
     end
 
@@ -154,9 +136,6 @@ module OpenapiClient
       warn '[DEPRECATED] the `valid?` method is obsolete'
       return false if @name.nil?
       return false if @address1.nil?
-      return false if @city.nil?
-      return false if @state.nil?
-      return false if @zip.nil?
       true
     end
 

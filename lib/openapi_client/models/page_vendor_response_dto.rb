@@ -35,7 +35,7 @@ module OpenapiClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'total_row_count' => :'Float',
+        :'total_row_count' => :'Integer',
         :'data' => :'Array<PageVendorResponseDTODataInner>'
       }
     end

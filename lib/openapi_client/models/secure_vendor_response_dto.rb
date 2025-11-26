@@ -268,7 +268,7 @@ module OpenapiClient
       return false unless legal_entity_type_validator.valid?(@legal_entity_type)
       payment_method_type_validator = EnumAttributeValidator.new('String', ["Check"])
       return false unless payment_method_type_validator.valid?(@payment_method_type)
-      vendor_status_validator = EnumAttributeValidator.new('String', ["NA", "Reviewing", "Approved", "Denied", "Suspend", "Deleted"])
+      vendor_status_validator = EnumAttributeValidator.new('String', ["NA", "Reviewing", "Approved", "Denied", "Suspended", "Deleted"])
       return false unless vendor_status_validator.valid?(@vendor_status)
       true
     end
@@ -296,7 +296,7 @@ module OpenapiClient
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] vendor_status Object to be assigned
     def vendor_status=(vendor_status)
-      validator = EnumAttributeValidator.new('String', ["NA", "Reviewing", "Approved", "Denied", "Suspend", "Deleted"])
+      validator = EnumAttributeValidator.new('String', ["NA", "Reviewing", "Approved", "Denied", "Suspended", "Deleted"])
       unless validator.valid?(vendor_status)
         fail ArgumentError, "invalid value for \"vendor_status\", must be one of #{validator.allowable_values}."
       end

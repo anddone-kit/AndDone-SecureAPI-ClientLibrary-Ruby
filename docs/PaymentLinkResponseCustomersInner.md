@@ -11,6 +11,7 @@
 | **notify_via_sms** | **Boolean** |  | [optional] |
 | **notify_via_email** | **Boolean** |  | [optional] |
 | **created_on** | **String** |  | [optional] |
+| **company_name** | **String** |  | [optional] |
 | **accounts** | [**Array&lt;PaymentLinkResponseCustomersInnerAccountsInner&gt;**](PaymentLinkResponseCustomersInnerAccountsInner.md) |  | [optional] |
 | **address** | [**TransactionPaymentResponseBillingContactAddress**](TransactionPaymentResponseBillingContactAddress.md) |  | [optional] |
 
@@ -27,6 +28,7 @@ instance = OpenapiClient::PaymentLinkResponseCustomersInner.new(
   notify_via_sms: null,
   notify_via_email: null,
   created_on: null,
+  company_name: null,
   accounts: null,
   address: null
 )
