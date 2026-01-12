@@ -17,14 +17,14 @@ require 'openapi_client'
 # Setup authorization
 OpenapiClient.configure do |config|
   # Configure API key authorization: x-api-key
-  config.api_key['x-api-key'] = 'T3Hj93GzbuhMLiNQg/yJ/yNArhFJeEHoSLyFZ9IBQkY='
+  config.api_key['x-api-key'] = 'YOUR_API_KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['x-api-key'] = 'Bearer'
   # Configure faraday connection
   config.configure_faraday_connection { |connection| 'YOUR CONNECTION CONFIG PROC' }
 
   # Configure API key authorization: x-app-key
-  config.api_key['x-app-key'] = 'bdYqRMdn'
+  config.api_key['x-app-key'] = 'YOUR_APP_KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['x-app-key'] = 'Bearer'
   # Configure faraday connection

@@ -5,13 +5,13 @@ require 'date'
 
 
 OpenapiClient.configure do |config|
-  config.api_key['x-api-key'] = 'T3Hj93GzbuhMLiNQg/yJ/yNArhFJeEHoSLyFZ9IBQkY='
-  config.api_key['x-app-key'] = 'bdYqRMdn'
+  config.api_key['x-api-key'] = 'YOUR_API_KEY'
+  config.api_key['x-app-key'] = 'YOUR_APP_KEY'
 end
 
 api_instance = OpenapiClient::SecurePaymentsApi.new
-x_api_key = 'T3Hj93GzbuhMLiNQg/yJ/yNArhFJeEHoSLyFZ9IBQkY=' 
-x_app_key = 'bdYqRMdn' 
+x_api_key = 'YOUR_API_KEY' 
+x_app_key = 'YOUR_APP_KEY' 
 x_version = "2.3" 
 origin = '73.164.237.28'
 

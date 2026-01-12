@@ -51,25 +51,47 @@ ruby -Ilib script.rb
 
 ## Getting Started
 
+1. Find and note your company AndDone Developer settings
+    1. Login to (UAT) https://portal.uat.anddone.com/   (Production) https://portal.anddone.com/
+    2. In the left menu, click "Developer" then "API Keys"
+    3. Your xApiKey will be the API Key
+    4. Your xAppKey will be the App Key
+2. Find your Origin by opening a browser and browse to: https://www.whatsmyip.org/  Your origin will be your IP Address
+3. Create a settings file to contain AndDone specific settings
+   1. Rename config.example.json to config.json
+   2. Input your API key, App key, and origin into the appropriate key values of config.json
+
 Please follow the [installation](#installation) procedure and then run the following code:
 
 ```ruby
 # Load the gem
+require 'json'
 require 'openapi_client'
 
-api_instance = OpenapiClient::SecureAutopayEnrollmentApi.new
-x_api_key = 'x_api_key_example' # String | an authorization header
-x_app_key = 'x_app_key_example' # String | an authorization header
-x_version = 8.14 # Float | x-version
-origin = 'origin_example' # String | origin
-auto_pay_enrollment_request = OpenapiClient::AutoPayEnrollmentRequest.new({quote_key: 'quote_key_example', payment_intent_id: 'payment_intent_id_example', email_address: 'email_address_example', process_method: 'NotDefined'}) # AutoPayEnrollmentRequest | Autopay Enrollment Detail
+# Setup authorization
+OpenapiClient.configure do |config|
+
+end
+
+api_instance = OpenapiClient::SecureEmbeddedPremiumFinanceApi.new
+
+file = File.read('./config.json')
+config = JSON.parse(file)
+x_api_key = config['x_api_key'] 
+x_app_key = config['x_app_key'] 
+x_version = config['x_version']
+origin = config['origin']
+
+opts = {
+  pf_policy_update_request_dto: OpenapiClient::PFPolicyUpdateRequestDTO.new({quote_key: 37, premium: 3.56, category: 'category_example', new_policy_number: 'new_policy_number_example'}) # PFPolicyUpdateRequestDTO | Signature Request details
+}
 
 begin
-  #This API is used for Autopay Enrollment.
-  result = api_instance.secure_autopayenrollment_post(x_api_key, x_app_key, x_version, origin, auto_pay_enrollment_request)
+  #This API is will update the policy number
+  result = api_instance.secure_epf_merchants_quotes_policy_put(x_api_key, x_app_key, x_version, origin, opts)
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Exception when calling SecureAutopayEnrollmentApi->secure_autopayenrollment_post: #{e}"
+  puts "Exception when calling SecureEmbeddedPremiumFinanceApi->secure_epf_merchants_quotes_policy_put: #{e}"
 end
 
 ```
@@ -80,7 +102,6 @@ All URIs are relative to *https://api.uat.anddone.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*OpenapiClient::SecureAutopayEnrollmentApi* | [**secure_autopayenrollment_post**](docs/SecureAutopayEnrollmentApi.md#secure_autopayenrollment_post) | **POST** /secure/autopayenrollment | This API is used for Autopay Enrollment.
 *OpenapiClient::SecureEmbeddedPremiumFinanceApi* | [**secure_epf_merchants_quotes_policy_put**](docs/SecureEmbeddedPremiumFinanceApi.md#secure_epf_merchants_quotes_policy_put) | **PUT** /secure/epf/merchants/quotes/policy | This API is will update the policy number
 *OpenapiClient::SecureEmbeddedPremiumFinanceApi* | [**secure_epf_quotes_booking_put**](docs/SecureEmbeddedPremiumFinanceApi.md#secure_epf_quotes_booking_put) | **PUT** /secure/epf/quotes/booking | This API will update PFA to book a quote.
 *OpenapiClient::SecureEmbeddedPremiumFinanceApi* | [**secure_epf_quotes_captureesign_put**](docs/SecureEmbeddedPremiumFinanceApi.md#secure_epf_quotes_captureesign_put) | **PUT** /secure/epf/quotes/captureesign | This API will eSign the pfa with insured name.
@@ -91,10 +112,11 @@ Class | Method | HTTP request | Description
 *OpenapiClient::SecureEmbeddedPremiumFinanceEndorsementsApi* | [**secure_epf_endorsements_post**](docs/SecureEmbeddedPremiumFinanceEndorsementsApi.md#secure_epf_endorsements_post) | **POST** /secure/epf/endorsements | This API will do a check of eligibility of account
 *OpenapiClient::SecureEmbeddedPremiumFinanceEndorsementsApi* | [**secure_epf_quote_endorsement_booking_put**](docs/SecureEmbeddedPremiumFinanceEndorsementsApi.md#secure_epf_quote_endorsement_booking_put) | **PUT** /secure/epf/quote/endorsement/booking | This API will update PFA to book a endorsement quote.
 *OpenapiClient::SecureEmbeddedPremiumFinanceEndorsementsApi* | [**secure_epf_quote_endorsement_post**](docs/SecureEmbeddedPremiumFinanceEndorsementsApi.md#secure_epf_quote_endorsement_post) | **POST** /secure/epf/quote/endorsement | This API will do return a quote for an existing policy or new policy for an existing account
+*OpenapiClient::SecureOrumApi* | [**secure_bankaccounts_details_post**](docs/SecureOrumApi.md#secure_bankaccounts_details_post) | **POST** /secure/bankaccounts/details | This API will request for verified bank account.
+*OpenapiClient::SecureOrumApi* | [**secure_bankaccounts_verify_post**](docs/SecureOrumApi.md#secure_bankaccounts_verify_post) | **POST** /secure/bankaccounts/verify | This API will request for account verification.
 *OpenapiClient::SecureOutboundPaymentsApi* | [**vendorapi_secure_outbound_payments_timelines_post**](docs/SecureOutboundPaymentsApi.md#vendorapi_secure_outbound_payments_timelines_post) | **POST** /vendorapi/secure/outboundPayments/timelines | This API gets outbound payment timelines
 *OpenapiClient::SecureOutboundPaymentsApi* | [**vendorapi_secure_outboundpayments_cancel_post**](docs/SecureOutboundPaymentsApi.md#vendorapi_secure_outboundpayments_cancel_post) | **POST** /vendorapi/secure/outboundpayments/cancel | This API cancel outbound payment request
 *OpenapiClient::SecureOutboundPaymentsApi* | [**vendorapi_secure_outboundpayments_detail_post**](docs/SecureOutboundPaymentsApi.md#vendorapi_secure_outboundpayments_detail_post) | **POST** /vendorapi/secure/outboundpayments/detail | This API fetch outbound payment by paymentId
-*OpenapiClient::SecureOutboundPaymentsApi* | [**vendorapi_secure_outboundpayments_image_post**](docs/SecureOutboundPaymentsApi.md#vendorapi_secure_outboundpayments_image_post) | **POST** /vendorapi/secure/outboundpayments/image | This API gets outbound payment JPG image in Base64 string format
 *OpenapiClient::SecureOutboundPaymentsApi* | [**vendorapi_secure_outboundpayments_post**](docs/SecureOutboundPaymentsApi.md#vendorapi_secure_outboundpayments_post) | **POST** /vendorapi/secure/outboundpayments | This API creates outbound payment request
 *OpenapiClient::SecureOutboundPaymentsApi* | [**vendorapi_secure_outboundpayments_search_post**](docs/SecureOutboundPaymentsApi.md#vendorapi_secure_outboundpayments_search_post) | **POST** /vendorapi/secure/outboundpayments/search | This API gets all outbound payment
 *OpenapiClient::SecurePaymentBatchingApi* | [**secure_batches_details_post**](docs/SecurePaymentBatchingApi.md#secure_batches_details_post) | **POST** /secure/batches/details | This API is used for getting Secure Payment Batch Details
@@ -138,8 +160,6 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [OpenapiClient::AutoPayEnrollmentRequest](docs/AutoPayEnrollmentRequest.md)
- - [OpenapiClient::AutoPayEnrollmentResponse](docs/AutoPayEnrollmentResponse.md)
  - [OpenapiClient::BankDetailDto](docs/BankDetailDto.md)
  - [OpenapiClient::CancelPaymentRequestDTO](docs/CancelPaymentRequestDTO.md)
  - [OpenapiClient::DataDto](docs/DataDto.md)
@@ -148,7 +168,6 @@ Class | Method | HTTP request | Description
  - [OpenapiClient::HeadingDto](docs/HeadingDto.md)
  - [OpenapiClient::MerchantTransactionEntityResponse](docs/MerchantTransactionEntityResponse.md)
  - [OpenapiClient::MerchantTransactionEntityResponseDataInner](docs/MerchantTransactionEntityResponseDataInner.md)
- - [OpenapiClient::OutboundPaymentImageResponseDTO](docs/OutboundPaymentImageResponseDTO.md)
  - [OpenapiClient::OutboundPaymentTimelineResponseDTOInner](docs/OutboundPaymentTimelineResponseDTOInner.md)
  - [OpenapiClient::PFCheckEndorsementsRequest](docs/PFCheckEndorsementsRequest.md)
  - [OpenapiClient::PFCheckEndorsementsResponse](docs/PFCheckEndorsementsResponse.md)
@@ -156,6 +175,8 @@ Class | Method | HTTP request | Description
  - [OpenapiClient::PFCheckEndorsementsResponseItemPoliciesInner](docs/PFCheckEndorsementsResponseItemPoliciesInner.md)
  - [OpenapiClient::PFEndorsementRequest](docs/PFEndorsementRequest.md)
  - [OpenapiClient::PFEndorsementRequestQuote](docs/PFEndorsementRequestQuote.md)
+ - [OpenapiClient::PFEndorsementRequestQuoteAgent](docs/PFEndorsementRequestQuoteAgent.md)
+ - [OpenapiClient::PFEndorsementRequestQuoteAgentAddress](docs/PFEndorsementRequestQuoteAgentAddress.md)
  - [OpenapiClient::PFEndorsementRequestQuoteCommunication](docs/PFEndorsementRequestQuoteCommunication.md)
  - [OpenapiClient::PFEndorsementRequestQuoteDetails](docs/PFEndorsementRequestQuoteDetails.md)
  - [OpenapiClient::PFEndorsementRequestQuoteDetailsRecurringACH](docs/PFEndorsementRequestQuoteDetailsRecurringACH.md)
@@ -189,8 +210,6 @@ Class | Method | HTTP request | Description
  - [OpenapiClient::PFLiteQuoteByPaymentLinkResponsePoliciesInner](docs/PFLiteQuoteByPaymentLinkResponsePoliciesInner.md)
  - [OpenapiClient::PFLiteQuoteByPaymentLinkResponsePoliciesInnerCarrier](docs/PFLiteQuoteByPaymentLinkResponsePoliciesInnerCarrier.md)
  - [OpenapiClient::PFLiteSecureQuoteRequest](docs/PFLiteSecureQuoteRequest.md)
- - [OpenapiClient::PFLiteSecureQuoteRequestAgent](docs/PFLiteSecureQuoteRequestAgent.md)
- - [OpenapiClient::PFLiteSecureQuoteRequestAgentAddress](docs/PFLiteSecureQuoteRequestAgentAddress.md)
  - [OpenapiClient::PFLiteSecureQuoteRequestInsured](docs/PFLiteSecureQuoteRequestInsured.md)
  - [OpenapiClient::PFLiteSecureQuoteRequestInsuredAddress](docs/PFLiteSecureQuoteRequestInsuredAddress.md)
  - [OpenapiClient::PFLiteSecureQuoteRequestMerchant](docs/PFLiteSecureQuoteRequestMerchant.md)
@@ -225,10 +244,8 @@ Class | Method | HTTP request | Description
  - [OpenapiClient::PaymentIntentRequestSplitsInner](docs/PaymentIntentRequestSplitsInner.md)
  - [OpenapiClient::PaymentIntentResponse](docs/PaymentIntentResponse.md)
  - [OpenapiClient::PaymentIntentResponseCustomersInner](docs/PaymentIntentResponseCustomersInner.md)
- - [OpenapiClient::PaymentIntentResponseIntent](docs/PaymentIntentResponseIntent.md)
  - [OpenapiClient::PaymentLinkExpiresResponse](docs/PaymentLinkExpiresResponse.md)
  - [OpenapiClient::PaymentLinkRequest](docs/PaymentLinkRequest.md)
- - [OpenapiClient::PaymentLinkRequestReferenceDataListInner](docs/PaymentLinkRequestReferenceDataListInner.md)
  - [OpenapiClient::PaymentLinkRequestSettings](docs/PaymentLinkRequestSettings.md)
  - [OpenapiClient::PaymentLinkRequestSettingsIntent](docs/PaymentLinkRequestSettingsIntent.md)
  - [OpenapiClient::PaymentLinkResponse](docs/PaymentLinkResponse.md)
@@ -251,6 +268,7 @@ Class | Method | HTTP request | Description
  - [OpenapiClient::PaymentTimeLineRequestDto](docs/PaymentTimeLineRequestDto.md)
  - [OpenapiClient::QuoteRequest](docs/QuoteRequest.md)
  - [OpenapiClient::QuoteRequestAgent](docs/QuoteRequestAgent.md)
+ - [OpenapiClient::QuoteRequestAgentAddress](docs/QuoteRequestAgentAddress.md)
  - [OpenapiClient::QuoteRequestDetails](docs/QuoteRequestDetails.md)
  - [OpenapiClient::QuoteRequestInsured](docs/QuoteRequestInsured.md)
  - [OpenapiClient::QuoteRequestInsuredAddress](docs/QuoteRequestInsuredAddress.md)
@@ -266,7 +284,6 @@ Class | Method | HTTP request | Description
  - [OpenapiClient::SecureBatchExecuteRequest](docs/SecureBatchExecuteRequest.md)
  - [OpenapiClient::SecureCancelledTransactionResponse](docs/SecureCancelledTransactionResponse.md)
  - [OpenapiClient::SecureMerchantTokenShortResponse](docs/SecureMerchantTokenShortResponse.md)
- - [OpenapiClient::SecurePFQuoteBookingRequest](docs/SecurePFQuoteBookingRequest.md)
  - [OpenapiClient::SecurePaymentBatchDetailsRequest](docs/SecurePaymentBatchDetailsRequest.md)
  - [OpenapiClient::SecurePaymentDetailsRequest](docs/SecurePaymentDetailsRequest.md)
  - [OpenapiClient::SecurePaymentLinkRequest](docs/SecurePaymentLinkRequest.md)
@@ -297,18 +314,17 @@ Class | Method | HTTP request | Description
  - [OpenapiClient::TokenLinkResponseDataInner](docs/TokenLinkResponseDataInner.md)
  - [OpenapiClient::TokenLinkSecureRequest](docs/TokenLinkSecureRequest.md)
  - [OpenapiClient::TokenLinkSecureRequestCustomersInner](docs/TokenLinkSecureRequestCustomersInner.md)
+ - [OpenapiClient::TokenLinkSecureRequestIntent](docs/TokenLinkSecureRequestIntent.md)
  - [OpenapiClient::TokenRequest](docs/TokenRequest.md)
  - [OpenapiClient::TransactionDetailResponse](docs/TransactionDetailResponse.md)
  - [OpenapiClient::TransactionDetailResponseSplitsInner](docs/TransactionDetailResponseSplitsInner.md)
  - [OpenapiClient::TransactionDetailResponseTenderInfo](docs/TransactionDetailResponseTenderInfo.md)
  - [OpenapiClient::TransactionPaymentResponse](docs/TransactionPaymentResponse.md)
  - [OpenapiClient::TransactionPaymentResponseAchTenderInfo](docs/TransactionPaymentResponseAchTenderInfo.md)
- - [OpenapiClient::TransactionPaymentResponseAchTenderInfoCommissionType](docs/TransactionPaymentResponseAchTenderInfoCommissionType.md)
  - [OpenapiClient::TransactionPaymentResponseBillingContact](docs/TransactionPaymentResponseBillingContact.md)
  - [OpenapiClient::TransactionPaymentResponseBillingContactAddress](docs/TransactionPaymentResponseBillingContactAddress.md)
  - [OpenapiClient::TransactionPaymentResponseBillingContactName](docs/TransactionPaymentResponseBillingContactName.md)
  - [OpenapiClient::TransactionPaymentResponseCcTenderInfo](docs/TransactionPaymentResponseCcTenderInfo.md)
- - [OpenapiClient::TransactionPaymentResponseRefundOrigin](docs/TransactionPaymentResponseRefundOrigin.md)
  - [OpenapiClient::TransactionPaymentResponseRefundTransactions](docs/TransactionPaymentResponseRefundTransactions.md)
  - [OpenapiClient::TransactionPaymentResponseRefundTransactionsDataInner](docs/TransactionPaymentResponseRefundTransactionsDataInner.md)
  - [OpenapiClient::TransactionPaymentResponseTransactionEntitySplitResponsesInner](docs/TransactionPaymentResponseTransactionEntitySplitResponsesInner.md)
@@ -323,20 +339,25 @@ Class | Method | HTTP request | Description
  - [OpenapiClient::VendorResponseDTOTemplate](docs/VendorResponseDTOTemplate.md)
  - [OpenapiClient::VendorResponseDTOVerificationResultsInner](docs/VendorResponseDTOVerificationResultsInner.md)
  - [OpenapiClient::VendorTimelineResponseListInner](docs/VendorTimelineResponseListInner.md)
+ - [OpenapiClient::VerificationEntityRequest](docs/VerificationEntityRequest.md)
+ - [OpenapiClient::VerifyBankAccountRequest](docs/VerifyBankAccountRequest.md)
+ - [OpenapiClient::VerifyBankAccountRequestBankAccountEntity](docs/VerifyBankAccountRequestBankAccountEntity.md)
+ - [OpenapiClient::VerifyBankAccountResponse](docs/VerifyBankAccountResponse.md)
+ - [OpenapiClient::VerifyBankAccountResponseHttpResponse](docs/VerifyBankAccountResponseHttpResponse.md)
 
 
 ## Documentation for Authorization
 
 
 Authentication schemes defined for the API:
-### api-key
+### x-api-key
 
 
 - **Type**: API key
 - **API key parameter name**: x-api-key
 - **Location**: HTTP header
 
-### app-key
+### x-app-key
 
 
 - **Type**: API key

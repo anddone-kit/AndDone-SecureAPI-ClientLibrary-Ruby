@@ -40,7 +40,7 @@ opts_generate = OpenapiClient::QuoteRequest.new(
   Insured: OpenapiClient::QuoteRequestInsured.new(
     UniqueId: x_app_key,
     AgentCustomerNumber: "Suyash",
-    Email: "dylan.smith@fmkagency.com",
+    Email: "test@test.com",
     CareOf: "",
     Address: OpenapiClient::QuoteRequestInsuredAddress.new(
       Name: "Sam",
@@ -54,7 +54,7 @@ opts_generate = OpenapiClient::QuoteRequest.new(
   ),
   Agent: OpenapiClient::QuoteRequestAgent.new(
     UniqueID: x_app_key,
-    Email: "dylan.smith@fmkagency.com",
+    Email: "test@test.com",
     Address: OpenapiClient::QuoteRequestInsuredAddress.new(
       Name: "Insurance Agency",
       Address1: "PO Box 486",

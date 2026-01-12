@@ -62,7 +62,7 @@ opts_update = OpenapiClient::PFEndorsementRequest.new(
     ],
     insured: PFEndorsementRequestQuoteInsured.new(
       AgentCustomerNumber: "Suyash",
-      Email: "dylan.smith@fmkagency.com",
+      Email: "test@test.com",
       CareOf: "",
       Address: PFEndorsementRequestQuoteInsuredAddress.new(
         Name: "Sam",
